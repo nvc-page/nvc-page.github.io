@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>NVC Admin</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
 </head>
@@ -78,6 +78,15 @@ h2{
    margin: 10px auto;
    margin-top: 60px;
 }
+.back-to-web{
+   height: auto;
+   min-height: 40px;
+   position: relative;
+   /* top: 70%; */
+   /* left: 50%; */
+   /* transform: translateX(-50%) translateY(-50%);
+   padding: 5px 10px; */
+}
 .form_height{
    background-color:rgba(255, 127, 80, 0.0);
    padding: 20px;
@@ -96,11 +105,13 @@ h2{
 <body>
 <div class="row containerX">
    <div class="col-xs-12 col-sm-6 img-out-side">
-      <div class="img-side"><button id="switch-form">CLICK TO SHOW BLOG INPUT CONTENT</button></div>
+      <div class="img-side"><button id="switch-form">CLICK TO SHOW BLOG INPUT CONTENT</button>
+      </div>
    </div>
    <div class="col-sm-6 col-xs-12 form_1 form_height">
          <form id="work-form" method="GET" action="" class="row" style="margin: 10px;">
-            <h2>Input contents for Work Site</h2> <br>
+            <h2>Input contents for Work Site</h2>
+            <a href="https://nvc-page.github.io/" class="back-to-web"><em>Back to website</em></a> <br> <br>
             <textarea type="text" name="project_name" placeholder="Project Name" class="col-xs-12 input-50px" cols="30" rows="1"></textarea>
             <textarea type="url" name="work_img" placeholder="Project Image 1" class="col-xs-12 input-50px" cols="30" rows="1"></textarea>
             <textarea type="text" name="content" placeholder="Project Content 1" cols="30" rows="3" class="col-xs-12"></textarea>
@@ -114,7 +125,8 @@ h2{
    </div>
    <div class="col-sm-6 col-xs-12 form_2 form_height">
          <form id="blog-form" method="GET" action="" class="row" style="margin: 10px;">       
-            <h2>Input contents for Blog Site</h2> <br>
+            <h2>Input contents for Blog Site</h2> 
+            <a href="https://nvc-page.github.io/" class="back-to-web"><em>Back to website</em></a> <br> <br>
             <textarea type="text" name="blog_name" placeholder="Project Name" class="col-xs-12 input-50px" cols="30" rows="1"></textarea>
             <textarea type="url" name="img_url1" placeholder="Project Image 1" class="col-xs-12 input-50px" cols="30" rows="1"></textarea>
             <textarea type="text" name="text_1" placeholder="Project Content 1" class="col-xs-12" cols="30" rows="3"></textarea>
