@@ -17,7 +17,7 @@ function read_value() {
 	var url = script_url + "?action=read";
   var json
 	$.getJSON(url, function (json) {
-		for (i in json.records) {
+		for (i=json.records.length-1; i >=0; i--) {
       //x+='<div class=col-md-12><div class="work-entry" data-toggle="modal" data-target="#myModal"> <a href=# class=work-img style=background-image:url('+json.records[i].work_img+')><div class=display-t><div class=work-name><h2>'+json.records[i].project_name+'</h2></div></div></a><div class="col-md-6 col-md-offset-3"><div class=desc><p id=text-contentX>'+json.records[i].content+'</p><p class=read><a href=#>View details</a></p></div></div><div class="store-url-2">'+json.records[i].img_url2+'</div><div class="store-url-3">'+json.records[i].img_url3+'</div><div class="store-text-2">'+json.records[i].text_2+'</div><div class="store-text-3">'+json.records[i].text_3+'</div><div class="store-time-stamp">'+json.records[i].time_stamp+'</div></div></div>' 
       var time_stamp = new Date(json.records[i].time_stamp);
           time_stamp = time_stamp.toLocaleDateString('en-US');
