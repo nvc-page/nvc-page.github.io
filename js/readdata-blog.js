@@ -18,7 +18,7 @@ function read_value() {
 	var url = script_url + "?action=read";
   var json
 	$.getJSON(url, function (json) {
-		for (i in json.records) {
+		for (i=json.records.length-1; i >=0; i--) {
       var time_stamp = new Date(json.records[i].time_stamp);
           time_stamp = time_stamp.toLocaleDateString('en-US');
       x += '<div class="col-md-4"><div class="article"><a href="" class="blog-img" data-toggle="modal" data-target="#myModal"> <img class="img-responsive main-blog-img" src="'+json.records[i].img_url1+'" alt="'+json.records[i].blog_name+'" width="100%"><div class="overlay"></div><div class="link"> <span class="read">Read more</h2></div></a><div class="desc"><span class="meta store-time-stamp">'+time_stamp+'</span><h2><a href="" class="blog-name" data-toggle="modal" data-target="#myModal">'+json.records[i].blog_name+'</a></h2><div id="text-contentX">'+json.records[i].text_1+'</div></div><div class="store-url-2">'+json.records[i].img_url2+'</div><div class="store-url-3">'+json.records[i].img_url3+'</div><div class="store-text-2">'+json.records[i].text_2+'</div><div class="store-text-3">'+json.records[i].text_3+'</div></div></div>'
