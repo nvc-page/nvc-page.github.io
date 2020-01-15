@@ -7,7 +7,7 @@
 	font-weight: normal;
 	font-style: normal;
 }
-@import url('https://fonts.googleapis.com/css?family=Delius+Swash+Caps|Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap');
 /* .about-desc .owl-carousel3 {
   background: url("/images/brush.png");
   background-size: cover;
@@ -15,7 +15,7 @@
 
 .about-desc .owl-carousel3 .item h2 span {
 	color: coral!important;
-	font-family: 'Delius Swash Caps', cursive;
+	font-family: 'Montserrat Alternates', sans-serif;
 	font-weight: bold;
 }
 .about-desc .owl-carousel3 .item h2 {
@@ -31,7 +31,7 @@ textarea {
 }
 
 body {
-	font-family: 'Delius Swash Caps', cursive;
+	font-family: 'Montserrat Alternates', sans-serif;
 	line-height: 1.8;
 	font-size: 16px;
 	font-weight: 400;
@@ -74,7 +74,7 @@ a:focus, a:active {
 p, span {
 	margin-bottom: 1.5em;
 	font-weight: 400;
-	font-family: 'Delius Swash Caps', cursive;
+	font-family: 'Montserrat Alternates', sans-serif;
 	letter-spacing: 1px
 	;
 }
@@ -88,7 +88,7 @@ span {
 }
 h1, h2, h3, h4, h5, h6 {
 	color: rgba(0, 0, 0, 0.8);
-	font-family: 'Delius Swash Caps', cursive;
+	font-family: 'Montserrat Alternates', sans-serif;
 	;
 	margin: 0 0 30px 0;
 }
@@ -436,7 +436,7 @@ header .nvc-navbar-brand .nvc-logo:hover {
 	left: -50px;
 }
 .rotate .heading {
-	font-family: 'Delius Swash Caps', cursive;
+	font-family: 'Montserrat Alternates', sans-serif;
 	;
 	font-size: 14px;
 	text-transform: uppercase;
@@ -473,7 +473,7 @@ header .nvc-navbar-brand .nvc-logo:hover {
 	margin-bottom: 0;
 	color: #000;
 	font-size: 50px;
-	font-family: 'Delius Swash Caps', cursive;
+	font-family: 'Montserrat Alternates', sans-serif;
 	;
 }
 .about-desc .desc {
@@ -486,7 +486,7 @@ header .nvc-navbar-brand .nvc-logo:hover {
 	left: 30px;
 }
 .about-desc .rotate .heading {
-	font-family: 'Delius Swash Caps', cursive;
+	font-family: 'Montserrat Alternates', sans-serif;
 	;
 	font-size: 14px;
 	text-transform: uppercase;
@@ -817,7 +817,7 @@ header .nvc-navbar-brand .nvc-logo:hover {
 	margin-bottom: 4em;
 }
 .services h3 {
-	font-family: 'Delius Swash Caps', cursive;
+	font-family: 'Montserrat Alternates', sans-serif;
 	;
 	font-size: 16px;
 	text-transform: uppercase;
@@ -1011,7 +1011,7 @@ header .nvc-navbar-brand .nvc-logo:hover {
 .article .blog-img .link .read {
 	display: table-cell;
 	vertical-align: middle;
-	font-family: 'Delius Swash Caps', cursive;
+	font-family: 'Montserrat Alternates', sans-serif;
 	;
 	color: #fff;
 	font-size: 12px;
