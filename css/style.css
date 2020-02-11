@@ -423,14 +423,14 @@ header .nvc-navbar-brand .nvc-logo:hover {
 } */
 #nvc-services, #nvc-contact, #nvc-work, #nvc-blog, #nvc-progress, #nvc-contact, #nvc-about {
 	padding: 10em 0;
-	padding-bottom: 5em;
+	padding-bottom: 0em;
 	clear: both;
 	position: relative;
 }
 
 @media screen and (max-width: 768px) {
 #nvc-services, #nvc-contact, #nvc-work, #nvc-blog, #nvc-progress, #nvc-contact, #nvc-about {
-	padding: 5em 0;
+	padding: 1em 0;
 }
 }
 .rotate {
