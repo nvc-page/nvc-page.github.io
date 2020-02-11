@@ -21,7 +21,9 @@ function read_value() {
       //x+='<div class=col-md-12><div class="work-entry" data-toggle="modal" data-target="#myModal"> <a href=# class=work-img style=background-image:url('+json.records[i].work_img+')><div class=display-t><div class=work-name><h2>'+json.records[i].project_name+'</h2></div></div></a><div class="col-md-6 col-md-offset-3"><div class=desc><p id=text-contentX>'+json.records[i].content+'</p><p class=read><a href=#>View details</a></p></div></div><div class="store-url-2">'+json.records[i].img_url2+'</div><div class="store-url-3">'+json.records[i].img_url3+'</div><div class="store-text-2">'+json.records[i].text_2+'</div><div class="store-text-3">'+json.records[i].text_3+'</div><div class="store-time-stamp">'+json.records[i].time_stamp+'</div></div></div>' 
       var time_stamp = new Date(json.records[i].time_stamp);
           time_stamp = time_stamp.toLocaleDateString('en-US');
-      x+='<div class=col-md-12><div class="work-entry" data-toggle="modal" data-target="#myModal"> <a href=# class=work-img style=background-image:url('+json.records[i].work_img+')><div class=display-t><div class=work-name><h2 class="project-name">'+json.records[i].project_name+'</h2></div></div></a><div class="col-md-6 col-md-offset-3"><div class=desc><div id=text-contentX>'+json.records[i].content+'</div><p class=read><a href="#" class="view-details">View details</a></p></div></div><div class="store-url-2">'+json.records[i].img_url2+'</div><div class="store-url-3">'+json.records[i].img_url3+'</div><div class="store-text-2">'+json.records[i].text_2+'</div><div class="store-text-3">'+json.records[i].text_3+'</div><div class="store-time-stamp project-time">'+time_stamp+'</div></div></div>' 
+      //x+='<div class="col-sm-6 col-md-4"><div class="work-entry" data-toggle="modal" data-target="#myModal"> <a href=# class=work-img style=background-image:url('+json.records[i].work_img+');><div class=display-t><div class=work-name><h2 class="project-name">'+json.records[i].project_name+'</h2></div></div></a><div class="col-md-12"><div class=desc><div id=text-contentX>'+json.records[i].content+'</div><p class=read><a href="#" class="view-details">View details</a></p></div></div><div class="store-url-2">'+json.records[i].img_url2+'</div><div class="store-url-3">'+json.records[i].img_url3+'</div><div class="store-text-2">'+json.records[i].text_2+'</div><div class="store-text-3">'+json.records[i].text_3+'</div><div class="store-time-stamp project-time">'+time_stamp+'</div></div></div>' 
+
+      x += '<div class="col-md-4 col-sm-6" ><div class="article"><a href="" class="blog-img" data-toggle="modal" data-target="#myModal"> <div style="background-image:url('+json.records[i].work_img+'); width:100%; height:250px; background-size:cover; background-position:center center"></div><div class="overlay"></div><div class="link"> <span class="read">Read more</h2></div></a><div class="desc"><span class="meta store-time-stamp">'+time_stamp+'</span><h2><a href="" class="blog-name" data-toggle="modal" data-target="#myModal">'+json.records[i].project_name+'</a></h2><div id="text-contentX">'+json.records[i].content+'</div></div><div class="store-url-2">'+json.records[i].img_url2+'</div><div class="store-url-3">'+json.records[i].img_url3+'</div><div class="store-text-2">'+json.records[i].text_2+'</div><div class="store-text-3">'+json.records[i].text_3+'</div></div></div>'
 		}
     document.getElementById("loader-bg").style.visibility="hidden";
     document.getElementById("loader").style.visibility="hidden";
@@ -31,18 +33,18 @@ function read_value() {
   });
 }
 read_value();
-
+//<img class="img-responsive main-blog-img" src="'+json.records[i].work_img+'" alt="'+json.records[i].project_name+'" width="100%" style="height:250px">
 // Insert data into modal
-$('body').delegate('.work-entry','click',function() {
-  var workImg = $(this).children(".work-img").css("background-image")
+$('body').delegate('.article','click',function() {
+  var workImg = $(this).find(".blog-img div").css("background-image")
       workImg = workImg.replace(/.*\s?url\([\'\"]?/, '').replace(/[\'\"]?\).*/, '');
-  var workName = $(this).find(".project-name").text();
+  var workName = $(this).find(".blog-name").text();
   var workContent = $(this).find("#text-contentX").html();
   var img_url2 = $(this).find("div.store-url-2").text();
   var img_url3 = $(this).find("div.store-url-3").text();
   var text_2 = $(this).find("div.store-text-2").html();
   var text_3 = $(this).find("div.store-text-3").html();
-  var timeStamp = $(this).find("div.store-time-stamp").text();
+  var timeStamp = $(this).find(".store-time-stamp").text();
 
   $(".modal-title").html(workName);
   //time-stamp
