@@ -24,7 +24,7 @@
       for (i=json.records.length-3; i < json.records.length; i++) {
         var time_stamp = new Date(json.records[i].time_stamp);
           time_stamp = time_stamp.toLocaleDateString('en-US');
-        $(".slide-blog-content").append("<div class=item><div class='col-sm-4 col-xs-12'><div class=article> <a href=blog.html class=blog-img style='background-image:url("+json.records[i].img_url1+");background-size: cover;background-position: center center;'><div class=overlay></div><div class=link> <span class=read>Read more</span> </div></a><div class=desc> <span class=meta>"+time_stamp+"</span><h2><a href=blog.html>"+json.records[i].blog_name+"</a></h2><div id='text-contentX'>"+json.records[i].text_1+"</div> </div></div></div></div>");
+        $(".slide-blog-content").append("<div class=item><div class='col-md-4 col-sm-6 col-xs-12'><div class=article> <a href=blog.html class=blog-img style='background-image:url("+json.records[i].img_url1+");background-size: cover;background-position: center center;'><div class=overlay></div><div class=link> <span class=read>Read more</span> </div></a><div class=desc> <span class=meta>"+time_stamp+"</span><h2><a href=blog.html>"+json.records[i].blog_name+"</a></h2><div id='text-contentX'>"+json.records[i].text_1+"</div> </div></div></div></div>");
       }
 
       document.getElementById("loader-bg").style.visibility="hidden";
@@ -44,11 +44,11 @@ var script_url_work = "https://script.google.com/macros/s/AKfycbwZyJ66M-y0B6xiwn
     var json
     var i, x="";
     $.getJSON(url, function (json) {
-      for (i=json.records.length-2; i < json.records.length; i++) {
+      for (i=json.records.length-3; i < json.records.length; i++) {
         //var time_stamp = new Date(json.records[i].time_stamp);
           //time_stamp = time_stamp.toLocaleDateString('en-US');
         
-        $(".slide-work-content").append("<div class='col-md-12'><div class='work-entry'> <a href='work.html' class='work-img 'style='background-image: url("+json.records[i].work_img+");'><div class='display-t'><div class='work-name'><h2>"+json.records[i].project_name+"</h2></div></div></a><div class='col-md-6 col-md-offset-3'><div class='desc'><div id='text-contentX'>"+json.records[i].content+"</div><p class='read'><a href='work.html'>View Details</a></p></div></div></div></div>")
+        $(".slide-work-content").append("<div class='col-md-4 col-sm-6 col-xs-12'><div class='work-entry'> <a href='work.html' class='work-img 'style='background-image: url("+json.records[i].work_img+");'><div class='display-t'><div class='work-name'><h2>"+json.records[i].project_name+"</h2></div></div></a><div class='col-xs-12'><div class='desc'><div id='text-contentX'>"+json.records[i].content+"</div><p class='read'><a href='work.html'>View Details</a></p></div></div></div></div>")
       }
       console.log(json.records.length)
     });
