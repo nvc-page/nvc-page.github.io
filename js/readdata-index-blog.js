@@ -48,7 +48,7 @@ var script_url_work = "https://script.google.com/macros/s/AKfycbwZyJ66M-y0B6xiwn
         var time_stamp = new Date(json.records[i].time_stamp);
         time_stamp = time_stamp.toLocaleDateString('en-US');
         
-        $(".slide-work-content").append("<div class=item><div class='col-md-4 col-sm-6 col-xs-12'><div class=article> <a href=blog.html class=blog-img style='background-image:url("+json.records[i].work_img+");background-size: cover;background-position: center center;'><div class=overlay></div><div class=link> <span class=read>Read more</span> </div></a><div class=desc> <span class=meta>"+time_stamp+"</span><h2><a href=blog.html>"+json.records[i].project_name+"</a></h2><div id='text-contentX'>"+json.records[i].content+"</div> </div></div></div></div>")
+        $(".slide-work-content").append("<div class=item><div class='col-md-4 col-sm-6 col-xs-12'><div class=article> <a href=work.html class=blog-img style='background-image:url("+json.records[i].work_img+");background-size: cover;background-position: center center;'><div class=overlay></div><div class=link> <span class=read>Read more</span> </div></a><div class=desc> <span class=meta>"+time_stamp+"</span><h2><a href=blog.html>"+json.records[i].project_name+"</a></h2><div id='text-contentX'>"+json.records[i].content+"</div> </div></div></div></div>")
       }
       //console.log(json.records.length)
     });
