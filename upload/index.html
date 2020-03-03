@@ -7,6 +7,7 @@
     <title>NVC Admin</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
 </head>
 <style>
 textarea {
@@ -127,7 +128,8 @@ h2{
             <button type="submit" id="submit-form" class="col-xs-6">SEND TO DATABASE</button>
          </form>
    </div>
-   <div class="col-sm-6 col-xs-12 form_2 form_height">
+
+<div class="col-sm-6 col-xs-12 form_2 form_height">
          <form id="blog-form" method="GET" action="" class="row" style="margin: 10px;">       
             <h2>Input contents for Blog Site</h2> 
             <a href="https://nvc-page.github.io/" class="back-to-web"><em>Back to website</em></a> <br> <br>
@@ -142,12 +144,23 @@ h2{
             <button type="submit" id="submit-blog-form" class="col-xs-6">SEND TO DATABASE</button>
          </form>
    </div>
+
+
+   <div class="col-sm-12 col-xs-12">
+      <br><br>
+      <textarea name="editor"></textarea>
+   </div>
 </div>
 
+<script>
+      CKEDITOR.replace( 'editor' );
+</script>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <script>
+   
    var F=1
    $(document).ready(function(){ 
       $(".form_2").css({display: "none"});
