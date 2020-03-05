@@ -44,6 +44,119 @@
 	<![endif]-->
 
 </head>
+<style>
+  .send-btn {
+      transition: all 0.15s;
+      outline: none;
+      overflow: hidden;
+      font-size: 19px;
+      overflow: visible;
+      border-radius: 0px;
+      /* position: relative; */
+      /* padding-right: 30px; */
+      background-color: white;
+      border: 1px solid coral;
+      color: #2d7586;
+      display: block;
+      /* margin: 13% auto; */
+      height: 50px;
+      width: 200px;
+      cursor: pointer;
+  }
+  .send-btn:hover {
+    background-color: rgba(255, 127, 80, 0.2);
+  }
+  .send-btn:hover svg {
+    transform: rotate(10deg);
+    transition: transform 0.15s;
+  }
+  .send-btn svg {
+    position: relative;
+    top: -52px;
+    left: 30px;
+    height: 30px;
+    width: auto;
+    transition: transform 0.15s;
+  }
+  .send-btn p {
+      position: relative;
+      top: 7px;
+      left: -15px;
+      color: coral
+  }
+  .send-btn svg path {
+    fill: coral;
+  }
+  .send-btn.clicked p {
+      color: coral
+  }
+  .send-btn.clicked {
+    background-color: white;
+    border: 1px solid coral;
+    color: white;
+    padding-right: 6px;
+    animation: bounce-in 0.3s;
+    cursor: default;
+  }
+  .send-btn.clicked svg {
+    animation: flyaway 1.3s linear;
+    top: -52px;
+  }
+  .send-btn.clicked svg path {
+    fill:coral;
+  
+  }
+  
+  @keyframes flyaway {
+    0% {
+      transform: rotate(10deg);
+      top: -52px;
+      left: 25px;
+      height: 30px;
+    }
+    5% {
+      transform: rotate(10deg);
+      top: -52px;
+      left: 0px;
+      height: 30px;
+    }
+    20% {
+      transform: rotate(-20deg);
+      top: -52px;
+      left: 30px;
+      height: 45px;
+    }
+    40% {
+      transform: rotate(10deg);
+      top: -40px;
+      left: 80px;
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(60deg);
+      top: -100px;
+      left: 800px;
+      height: 0;
+      opacity: 0;
+    }
+  }
+  
+  /* @keyframes bounce-in {
+    0% {
+      padding-right: 30px;
+    }
+    40% {
+      padding-right: 6px;
+    }
+    50% {
+      padding-left: 30px;
+    }
+    100% {
+      padding-left: 6px;
+    }
+  } */
+  
+  </style>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 <nav id="nvc-main-nav" role="navigation"> <a href="#" class="js-nvc-nav-toggle nvc-nav-toggle active"><i></i></a>
   <div class="js-fullheight nvc-table">
@@ -125,7 +238,14 @@
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
-                    <input type="submit" value="Send Message" class="btn btn-primary btn-outline" id="submit-form">
+                      <button class="send-btn" type="submit" id="submit-form">
+                          <p>Send</p>
+                          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                              <path id="paper-plane-icon" d="M462,54.955L355.371,437.187l-135.92-128.842L353.388,167l-179.53,124.074L50,260.973L462,54.955z
+                              M202.992,332.528v124.517l58.738-67.927L202.992,332.528z"></path> 
+                          </svg>
+                      </button>
+                    <!-- <input type="submit" value="Send Message" class="btn btn-primary btn-outline" id="submit-form"> -->
                   </div>
                 </div>
               </form>
@@ -183,7 +303,7 @@
       <div class="fb-customerchat"
         attribution=setup_tool
         page_id="102585297951745"
-  theme_color="#ff7f50">
+        theme_color="#ff7f50">
       </div>			      
 				      
 				      
@@ -192,8 +312,13 @@
 
 <script type="text/javascript">
  $(document).ready(function(){ 
-  
-
+  $('.send-btn').click(function() {
+    $(this).toggleClass('clicked');
+    $('.send-btn p').text(function(i, text) {
+        return text === "Sent!" ? "Send" : "Sent!";
+    });
+  });
+//_____________________________________________ 
    var submit = $("#submit-form");
       submit.click(function(e){
          //e.preventDefault();
