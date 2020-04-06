@@ -1,0 +1,63 @@
+ 
+        #box1{
+            height: 600px;
+            width: 100%;
+            background-image:url("../PICSLICE/History/cactus-history-1.jpeg");
+            background-size: cover;
+            display: table;
+            background-attachment: fixed;
+        }
+        #box2{
+            height: 600px;
+            width: 100%;
+            background-image: url("../PICSLICE/History/cactus-history-2.png");
+            background-size: cover;
+            display: table;
+            background-attachment: fixed;
+        }
+        #box3{
+            height: 600px;
+            width: 100%;
+            background-image: url("../PICSLICE/History/cactus-history-5.jpeg");
+            background-size: cover;
+            display: table;
+            background-attachment: fixed;
+        }
+        h1{
+            font-size: 25px;
+            color:white;
+            margin: 0px;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+            padding-bottom: 20px;
+        }
+.history-content{
+    position: relative;
+    top: 100px;
+}
+.inside-box{
+    position: relative;
+    top: 270px;
+    left: 55%;
+    width: 480px;
+    height: 280px;
+    background-color: rgba(96,93,93,0.68);
+    color: white;
+    font-size: 16px;
+    padding: 20px;
+    border-radius: 5px;
+}
+.inside-box-2{
+    position: relative;
+    top: 270px;
+    left:10px;
+    width: 480px;
+    height: 280px;
+    background-color: rgba(96,93,93,0.68);
+    color: white;
+    font-size: 16px;
+    padding: 20px;
+    border-radius: 5px;
+    
+}

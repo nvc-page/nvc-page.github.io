@@ -1,0 +1,49 @@
+#myVideo {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  min-width: 1180px; 
+  height: auto;
+    transform: scale(1.5) translateY(-150px);
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+.content {
+  position: relative;
+  bottom: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 1020px;
+  padding: 20px;
+    z-index: 1000;
+    top: 500px;
+    
+}
+
+#myBtn {
+    position: absolute;
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+.Mission-Video {
+    width: 1180px;
+    height: 600px;
+    position: absolute;
+    top: 0px;
+    left: 0px;  
+    overflow: hidden;
+    margin: 0px;
+    background: rgba(255,0,4,1.00)
+}

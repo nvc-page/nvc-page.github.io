@@ -1,0 +1,72 @@
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+    background: rgba(96,93,93,0.00);
+      text-align: left
+}
+
+/* Create two equal columns that sits next to each other */
+.column1 {
+  -ms-flex: 10%; /* IE 10 */
+  flex: 10%;
+  padding:  4px;
+    background: rgba(165,33,215,0.00);
+    text-align: left;
+}
+
+
+.column1 > img:active {
+    transform: scale(2.4) translateX(180px);
+    transition: all .3s ease-in-out;
+    box-shadow: 0px 0px 10px 1px grey
+}
+.column2 img:active {
+    transform: scale(2) translateX(70px);
+    transition: all .3s ease-in-out;
+    box-shadow: 0px 0px 10px 1px grey
+}
+.column3 img:active {
+    transform: scale(3) translateX(-45px);
+    transition: all .3s ease-in-out;
+    box-shadow: 0px 0px 10px 1px grey
+}
+.column4 img:active {
+    transform: scale(1.9) translateX(-220px);
+    transition: all .3s ease-in-out;
+    box-shadow: 0px 0px 10px 1px grey
+}
+
+.column2 {
+  -ms-flex: 15%; /* IE 10 */
+  flex: 15%;
+  padding: 0 4px;
+    background: rgba(165,33,215,0.00);
+    text-align: left
+}
+.column3 {
+  -ms-flex: 5%; /* IE 10 */
+  flex: 5%;
+  padding: 0 4px;
+    background: rgba(165,33,215,0.00);
+    text-align: left
+}
+.column4 {
+  -ms-flex: 17%; /* IE 10 */
+  flex: 17%;
+  padding: 0 4px;
+    background: rgba(165,33,215,0.00);
+    text-align: left
+}
+.QUOTE{
+    font-size: 18px;;
+    padding: 10px 0px
+}
+
