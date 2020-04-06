@@ -1,0 +1,858 @@
+@charset "utf-8";
+@import url("../webfonts/VNF_MuseoBook/stylesheet.css");
+@import url("../webfonts/VL_Selphia/stylesheet.css");
+
+body {
+    font: 20px "VNF MuseoBook";
+    background-image: url(../PICS/HOME/BG1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px auto;
+    padding: 0px;
+    font-family: "VNF MuseoBook";
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 1px;
+    background-attachment: fixed
+        
+}
+.BTT{    
+    position: fixed;
+    right: -10px;
+    bottom: -5px;
+    font-size: 40px;
+    display: none;
+    z-index: 9999
+}
+
+
+h3{
+    font-family: "VL Selphia";
+    color: rgba(255,146,68,1.00);
+    font-size: 40px;
+}
+h4{
+    font-family: "VL Selphia";
+    color: rgba(255,146,68,1.00);
+    font-size: 30px;
+}
+    
+#FRAME {
+    max-width: 1200px;
+    background: rgba(255,255,255,0.3);
+    min-width: 480px;  
+    padding: 0px
+}
+.NAV .container-fluid img {
+    position: absolute;
+    top: 42px;
+    left: 5%;
+    transition: all .5s;
+    height: 63px;
+    width: auto;
+}
+
+.NAV{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    z-index: 11000
+}
+.NAV-MENU li a{
+    color: #3D3D3D;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "VNF MuseoBook";
+    letter-spacing:2px ;
+}
+.NAV-MENU{
+    width: 70%;
+    position: absolute;
+    top: 70px;
+    margin-right: 5%;
+    right: 0px;
+    margin-left: none;
+    transition: all .5s;
+}
+.container-fluid .NAV-MENU li {
+    background:none;
+    list-style: none;
+    float: right;
+    padding:15px 0px 15px 0px;
+    width: 14.285%;
+    text-align: right;
+    height: auto;
+    margin-bottom: 0px; 
+    transition: all .5s
+    
+}
+.container-fluid .NAV-MENU li ul{
+    background:rgba(255,255,255,0.73);
+    margin: 0px;
+    padding: 10px;
+    display: none;
+    transition: all .5s;
+}
+.container-fluid .NAV-MENU li:hover ul{
+    display: block
+}
+.container-fluid .NAV-MENU li > ul > li {
+    width: 100%;
+    float: none;
+    padding:5px 0px;
+    margin: 0px;
+    list-style-type: none;
+    text-align: right; 
+}
+.container-fluid .NAV-MENU li:hover > a{
+    color: coral;
+    text-decoration: underline;
+    font-style: italic;
+}
+.container-fluid .NAV-MENU li.active > a{
+    color: coral;
+    text-decoration: underline
+}
+
+
+.NAV-MENU li a{
+    transition: all .3s;
+    font-weight: 600;
+   /* text-shadow: 1px 1px 1px grey;*/
+}
+.NAV-MENU > li > a:hover{
+    color: #ff9244;
+    text-decoration: underline;
+}
+
+.navbarform{
+    position: absolute;
+    width: auto;
+    float: right;
+    right: 5%;
+    height: 42px;
+    top: 42px;
+    font-size: 13px;
+    background: none
+}
+
+.Search-bar{
+    border: 2px solid #ff9244;
+    border-right: 0px;
+    padding: 0px 10px;
+    color: #ff9244;
+    height: 30px;
+    border-radius: 2px 0px 0px 2px;
+    width: 20vw;
+}
+.submit-search { 
+    background: #ff9244;
+    border: 2px solid #ff9244;
+    height: 30px;
+    border-radius: 0px 2px 2px 0px ;
+    color: white;
+    transition: all .5s;
+    text-align: center;
+    padding: 0px 10px;
+}
+.submit-search:hover {
+    background: white;
+    border: 2px solid #ff9244;
+    color: #ff9244;
+
+}
+.btnLogin{
+    background: #ff9244;
+    border: 2px solid #ff9244;
+    height: 30px;
+    border-radius: 2px;
+    
+    transition: all .5s
+}
+.btnLogin:hover{
+    background: white;
+    border: 2px solid #ff9244;
+    height: 30px;
+    border-radius: 2px;
+    color: #ff9244
+}
+.btnLogin a{
+    color: white;
+}
+.btnLogin:hover a{
+    color: #ff9244
+}
+
+.Nav-Menu-Btn{
+    background: #FF9244;
+    padding: 0px 0px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    float: right;
+    display: none; 
+    cursor: pointer;
+    margin-left: 5px;
+    border-radius: 2px;
+    transition: all .5s
+}
+#M3L:hover li  {
+    background: #FF9244;
+}
+.Nav-Menu-Btn:hover{
+    background: white;
+}
+#M3L > li{
+    width: 20px;
+    height: 2px;
+    list-style: none;
+    margin: 6px;
+    background: white;
+    transition: all .5s
+}
+
+/*---------------------------------------HOME----------------------------------------*/ 
+#carousel1 .right.carousel-control {
+    background: rgba(0,0,0,0.00);
+    width: 50px;
+    color: #FF9244;
+    text-shadow: 0px 0px 0px transparent;
+    z-index: 2; 
+}
+
+#carousel1 .left.carousel-control {
+    background: rgba(0,0,0,0.00);
+    width: 50px;
+    color: #FF9244;
+    text-shadow: 0px 0px 0px transparent;
+    z-index: 2; 
+}
+
+
+.BG-Slide{
+    background: rgba(255,146,68,.0);
+    z-index: 1;
+    padding: 5%;
+    margin:0px;
+    width: 100vw
+}
+.carousel-inner .item .carousel-caption {
+    position: absolute;
+    top: 13%;
+    left: 0px;
+    margin-left: 5%;
+    text-align: left;
+    z-index: 1
+}
+.carousel-inner .item img {
+    z-index: 1000
+}
+.carousel-caption .BG-Slide h3 {
+    font-size: 80px;
+    font-family: "VL Selphia";
+    color: rgba(255,146,68,1.00);
+    text-shadow: none;
+}
+.carousel-caption .BG-Slide p {
+    font-size: 16px;
+    transition: all .5s;
+    color: #3D3D3D;
+    text-shadow: none;
+}
+
+.BG-Slide a .btn {
+    padding: 10px;
+    border: 2px solid #FF9244;
+    background: #FF9244;
+    color: white;
+    transition: all .3s;
+    text-decoration: none;
+    max-width: 20vw;
+    height: 40px;
+    line-height: 15px;
+}
+
+.BG-Slide a .btn:hover {
+    border: 2px solid #FF9244;
+    background: white;
+    color: #FF9244
+}
+
+
+.Home-About{
+    margin-left: 0%;
+    margin-right: 0%;
+    padding: 0px 5%;
+    margin-top: 40px;
+    transition: all .5s;
+    text-align:justify;
+    position: relative
+}
+
+
+.carousel-indicators {
+    margin-bottom: -20px; 
+}
+
+.carousel-indicators li {
+  background-color: #FF9244;
+  border: 1px solid #FF9244;
+  border-radius: 50%;
+}
+
+
+.Local-cuisine{
+    margin-left: 0%;
+    margin-right: 0%;
+    padding: 0px 5%;
+    margin-top: 60px;
+    transition: all .5s;
+    position: relative
+}
+
+
+.readmore{
+    border:0px;
+    background: transparent;
+    color: #FF9244
+}
+.readmore:hover{
+    color: #FF9244;
+    text-decoration: underline;
+}
+
+/* CSS NAV TABLE - HOME */
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    color: white;
+    cursor: default;
+    background-color: rgba(255,146,68,1.00);
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+    padding: 10px 0px;
+}
+.nav-tabs > li > a {
+    color: rgba(61,61,61,1.00);
+    padding: 10px 0px;
+    font-size: 16px;
+    transition: all .4s
+}
+.nav-tabs > li{
+    width: 25%;
+    text-align: center
+}
+.nav-tabs li a:hover{
+    background: rgba(255,146,68,0.60);
+    color: white;
+}
+
+.nav-tabs {
+  border-bottom: 1px solid #FF9244;
+}
+
+#FRAME .Local-cuisine div {
+    /*height: 470px;*/
+    margin-top: 20px
+}
+div #tabContent1 .tab-pane {
+    height: 400px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left top;
+    margin-top: 0px;
+    text-align: justify;
+}
+div #tabContent1 #home1{
+    background-image: url("../PICS/HOME/Sushi.png");
+}
+div #tabContent1 #paneTwo1{
+    background-image:url("../PICS/HOME/Sashimi.png")
+}
+div #tabContent1 #paneTwo2{
+    background-image:url("../PICS/HOME/tempura.png")
+}
+div #tabContent1 #paneTwo3{
+    background-image:url("../PICS/HOME/Takoyaki.png")
+}
+
+div #tabContent1 .tab-pane a .btn {
+    padding: 10px;
+    border: 2px solid #FF9244;
+    background: #FF9244;
+    color: white;
+    transition: all .3s;
+    text-decoration: none;
+    width: 150px;
+    height: 40px;
+    line-height: 15px;
+    right: 0px;
+    position: absolute;
+    bottom: 40px
+}
+
+div #tabContent1 .tab-pane a .btn:hover {
+    border: 2px solid #FF9244;
+    background: white;
+    color: #FF9244
+}
+
+.tabpanel-content {
+    margin-top: 30px;
+    margin-right: 0px;
+    margin-left: 45%;
+    background-image: none;
+    top: 00px;
+    padding-top: 20px;
+    position: absolute;
+    transition: all .5s;
+    
+}
+
+.Japanese-diet{
+    position: relative;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding: 15px 5% 10px;
+    margin-top: 40px;
+    transition: all .5s;
+    height: auto;
+    background-image: url("../PICS/HOME/TypicalDiet.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: left;
+    
+}
+.Japanese-diet h3{
+    color: white
+}
+
+h5{
+    color: #FF9244;
+    font-family: "VL Selphia";
+    font-size: 18px
+}
+.Japanese-diet .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.Japanese-diet .row .col-sm-3.col-xs-6 .thumbnail {
+    position: relative;
+    background-color: white;
+    height: 95%;
+    padding: 0px 0px 0px;
+    border-radius: 0px;
+    border:none;
+    transition: all .3s;
+    cursor: pointer
+}
+
+.Japanese-diet .row .col-sm-3.col-xs-6:hover .thumbnail {
+    box-shadow: 0px 0px 3px 3px white;
+    transform: scale(1.04)
+}
+
+.Japanese-diet-exploring {
+    position: relative;
+    right: 0px;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 3px;
+    background: #FF9244;
+    color: white;
+    transition: all .3s;
+    text-decoration: none;
+    width: 170px;
+    height: 40px;
+    line-height: 18px;
+    display:none;
+    cursor: pointer
+}
+.Japanese-diet-exploring:hover {
+    border: 2px solid white;
+    background: white;
+    color: #FF9244
+}
+
+.thumbnail .caption button {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    border: 0px;
+    color: #FF9244;
+    background: transparent;
+}
+
+.thumbnail .caption button:hover{
+    color: #FF9244;
+    text-decoration: underline;
+}
+
+.Famous-quote{
+    margin-left: 0%;
+    margin-right: 0%;
+    padding: 0px 0%;
+    margin-top: 50px;
+    transition: all .5s;
+    text-align:justify;
+    position: relative;
+    height: auto;
+}
+
+.Div-Quote{
+    height: 270px;
+    width: 100%;
+    padding: 30px 10% 20px 12%;
+    transition: all .3s
+}
+.Div-Quote h5{
+    font-family: "VNF MuseoBook";
+    font-size: 20px;
+    right: 0px;
+    position: absolute;
+    bottom: 20px;
+    margin-right:10%;
+    margin-top: 50px;
+    transition: all .3s
+    
+}
+#carousel2 .carousel-inner .Vertical-line {
+    width: 2px;
+    height: 100%;
+    background: #FF9244;
+    position: absolute;
+    margin-left: 10%;
+    transition: all .3s
+}
+.Famous-quote #carousel2 .carousel-indicators {
+    display: none;
+}
+
+.Famous-quote #carousel2 .left.carousel-control, .Famous-quote #carousel2 .right.carousel-control {
+    width: 130px;
+    background: transparent;
+    color: #FF9244;
+    text-shadow: none;
+    display: none;
+}
+
+
+
+footer{
+    height: auto;
+    margin-top: 50px;
+    background:rgba(255,255,250,0.3);
+    position: relative;
+    padding-bottom: 100px;
+    padding: 0px
+    
+    
+}
+#FRAME .Footer img {
+    margin: 37px 0px 0px 5%;
+    padding: 0px
+}
+
+
+#FRAME > .Footer > .Copy-right {
+    margin: 20px 0px 0px;
+    width: 100%;
+    background: #FF9244;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    bottom: 0px; 
+}
+
+.Footer .row {
+    padding: 0px 0px 100px 0px;
+    margin: 30px 5% 0px 5%;
+    background: none;
+    transition: all .4s;
+}
+.Footer > .row > div{
+    padding: 0px 0px;
+    margin: 0px;  
+    line-height: 30px
+}
+.Footer > .row > .col-md-6 {
+    padding-right: 50px
+}
+.Footer > .row > .col-md-6 p{
+    text-align: justify;
+}
+.Footer .row div h5 {
+    font-size: 30px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin: 0px;
+    transition: all .4s
+}
+
+
+.Footer .row .col-md-3 > .row > div {
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+    background: none;
+    position:relative;
+    transition: all .4s
+}
+.Footer .row .col-md-3 div{
+    background: none;
+    padding: 0px;
+    height: 60px;
+    transition: all .4s
+}
+.row .col-md-3.icon .row {
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
+    position: relative;
+    bottom: 30px;
+    transition: all .4s
+}
+.row .col-sm-4.col-xs-2 img {
+    cursor: pointer
+}
+.container-fluid #NAV li {
+    font-family:"VNF MuseoBook";
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(61,61,61,1.00);
+    transition: all .5s;
+    letter-spacing: 1px;
+    
+}
+.container-fluid #NAV li:hover {
+    font-style: italic;
+    color: #FF9244
+}
+
+/*---------------------------------------END-HOME----------------------------------------*/ 
+
+
+@media screen and (max-width:991px){
+/*---------------------------------------HOME----------------------------------------*/ 
+.NAV-MENU{
+    position: absolute;
+    top: 80px;
+    margin-right: 5%;
+    background: none;
+    margin-left: 5%;
+    width: 95%
+}
+.container-fluid .NAV-MENU li {
+    background:none;
+    list-style: none;
+    float: right;
+    padding:15px 0px 15px 0px;
+    width: 14.2%;
+    text-align: center;
+    height: auto;
+    margin-bottom: 0px; 
+    position: relative;
+}
+.NAV .container-fluid img {
+    position: absolute;
+    top: 42px;
+    left: 5%;
+    transition: all .5s;
+    height: 40px;
+    width: auto;
+}
+
+
+    
+.container-fluid .NAV-MENU li > ul > li {
+        text-align: center
+}
+.carousel-caption .BG-Slide p {
+    font-size: 12px;
+}
+    
+.BG-Slide{
+    top: -10px;
+    position: absolute;
+}
+.carousel-caption .BG-Slide h3 {
+    font-size: 60px;
+}
+    
+}
+
+/*---------------------------------------END-HOME----------------------------------------*/ 
+
+@media screen and (max-width:767px){
+/*---------------------------------------HOME----------------------------------------*/ 
+.Nav-Menu-Btn{
+        display: none;
+    }
+.NAV-MENU{
+    position: absolute;
+    top: 80px;
+    margin-right: 0%;
+    background: white;
+    margin-left: 0%;
+    width: 220px;
+    height: auto;
+    z-index: 11;
+    padding: 10px 30px;
+}
+    
+.container-fluid .NAV-MENU li {
+    background:none;
+    list-style: none;
+    float: none;
+    padding:10px 0px 0px 0px;
+    width: 100%;
+    text-align: left;
+    height: auto;
+    margin-bottom: 0px; 
+    color: white;
+}
+.NAV-MENU li a {
+    color: black;
+    font-weight: 100;
+}
+/*.NAV-MENU li > a:hover {
+    color: white;
+    font-weight: 100;
+    font-style: italic;
+    text-decoration: underline;
+}*/
+
+/*.container-fluid .NAV-MENU li.active > a{
+    color: white;
+    text-decoration: underline
+}*/
+
+
+.NAV{
+        height: 100px
+    }
+    
+    
+.container-fluid .NAV-MENU li ul{
+    background: none;
+}
+    
+.container-fluid .NAV-MENU li ul li{
+    text-align: left;
+    list-style-type: square;
+    list-style-position: inside
+}
+.NAV .container-fluid img {
+    left: 0%;
+}
+.navbarform{
+    right: 0%;
+}
+
+    
+.carousel-inner .item .carousel-caption {
+    margin-left: 0%;
+    text-align: center;
+    top: 0%;
+    background: rgba(255,146,68,0.30);
+    width: 100%;
+    height: 100%;
+}
+
+    
+.BG-Slide a .btn {
+    padding: 10px;
+    border: 2px solid white;
+    background: #FF9244;
+    color: white;
+    transition: all .3s;
+    text-decoration: none;
+    max-width: 150px;
+    height: 40px;
+    line-height: 15px;
+    font-size: 13px;
+}
+.BG-Slide{
+    top: -10px;
+    position: absolute;
+    
+    }
+.carousel-caption .BG-Slide h3 {
+    font-size: 40px;
+    color: white;
+}
+.carousel-caption .BG-Slide p {
+    font-size: 12px;
+    color: white;
+}
+.Home-About{
+    padding: 0px 0%;
+
+}
+.Local-cuisine{
+    padding: 0px 0%;
+}
+.Japanese-diet{
+    padding: 5px 10px;
+}
+.tabpanel-content {
+    position: absolute;
+    margin-right: 0px;
+    margin-left: 0%;
+    padding-top: 0px;
+    background: rgba(255,146,68,0.5);
+    width: 100%;
+    height: 380px;
+    padding:20px 10px;
+    
+}
+    
+div #tabContent1 .tab-pane a .btn {
+    left: 10px;
+    bottom: 10px;
+}
+div #tabContent1 .tab-pane {
+    color: white;
+    top: -30px;
+}
+.tabpanel-content h4 {
+    color: white;
+}
+
+.Japanese-diet-exploring {
+    position: relative;
+    bottom: 0px;
+    margin:0px 0px 10px 0px;
+    display:block
+}
+    
+.Div-Quote{
+    padding: 30px 0% 20px 3%;
+}
+.Div-Quote h5{
+    margin-right:0%;
+    margin-top: 50px
+}
+#carousel2 .carousel-inner .Vertical-line {
+    margin-left: 0%
+}
+#FRAME {
+    padding:0px 10px
+}
+
+.Footer .row {
+    margin: 30px 0% 0px 10px
+}
+#FRAME .Footer img {
+    margin: 30px 0px 0px 10px;
+}
+.container-fluid #NAV li {
+    font-weight: 100;
+    letter-spacing: 1px
+}
+/*---------------------------------------HOME----------------------------------------*/ 
+}

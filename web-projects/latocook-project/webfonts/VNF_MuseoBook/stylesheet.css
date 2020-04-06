@@ -1,0 +1,6 @@
+@font-face {
+	font-family: 'VNF MuseoBook';
+	src: url('VNF-MuseoBook.woff') format('woff'),
+		url('VNF-MuseoBook.ttf') format('truetype'),
+		url('VNF-MuseoBook.svg') format('svg');
+}

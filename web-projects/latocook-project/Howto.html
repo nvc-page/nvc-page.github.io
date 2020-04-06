@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Latocook How to</title>
+    <!-- Bootstrap -->
+	<link href="css/bootstrap-3.4.0.css" rel="stylesheet">
+	<link href="css/MyStyle.css" rel="stylesheet" type="text/css">
+	
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+  <script type="text/javascript">
+        function MM_preloadImages() { //v3.0
+          var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+            var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+            if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+        }
+
+        function MM_swapImgRestore() { //v3.0
+          var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+        }
+
+        function MM_findObj(n, d) { //v4.01
+          var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+            d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+          if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+          for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+          if(!x && d.getElementById) x=d.getElementById(n); return x;
+        }
+
+        function MM_swapImage() { //v3.0
+          var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+           if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+        }
+    </script>
+  <style>
+.Howto-page{
+    margin: 0px 5%;
+    background: none;
+    margin-bottom: 105px
+}
+#page-note-text{
+    background: none;
+    display:none;
+    margin-top: 30px;
+    margin-bottom: 30px
+
+
+}
+div .row >.div {
+    margin-top: 10px
+}
+#FRAME .Howto-page .row:nth-child(2) {
+    margin-top: 20px;
+    background: none
+}
+.btn01, .btn02, .btn03, .btn04, .btn05, .btn06{
+    margin: 10px 0px;
+    background: #FF9244;
+    border: 2px solid #FF9244;
+    color: white;
+    border-radius: 2px;
+    transition: all .5s
+}
+.btn01:hover, .btn02:hover, .btn03:hover, .btn04:hover, .btn05:hover, .btn06:hover{
+    margin: 10px 0px;
+    background: white;
+    border: 2px solid #FF9244;
+    color: #FF9244;
+    border-radius: 2px
+}
+.btn02{
+    display: none;
+}
+.btn04{
+    display: none;
+}
+      .btn06{
+    display: none;
+}
+#ingredient, #ingredient01, #ingredient02{
+    display: none;
+    transition: all .5
+}
+h5 {
+    font-size: 25px
+
+}
+#FRAME .Howto-page .row {
+    margin-bottom: 50px;
+}
+.row.thumbnail {
+    padding: 0px;
+    margin: 0px;
+}
+.Howto-page .row.thumbnail .col-sm-4.col-xs-12 {
+    margin: 0px;
+    padding: 0px
+}
+.row.thumbnail .col-sm-4.col-xs-12 .thumbnail {
+    padding: 0px;
+    margin: 0px;
+}
+.Howto-page nav {
+    padding: 0px;
+    margin: 0px 0% 30px 0%;
+    background: red;
+    position: relative;
+}
+.Howto-page nav .pagination {
+    position: absolute;
+    right: 0px
+}
+.Howto-page nav .pagination li a{
+    color: white;
+    background: rgba(255,146,68,1.00)
+}
+.Howto-page nav .pagination li a:hover{
+    color: rgba(255,146,68,1.00);
+    background: white
+}
+      /*#FRAME .Howto-page .row.page-note {
+    margin-bottom: 50px;
+    background: url("PICS/HOWTO/BG.jpg");
+          height: 500px;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-position: center center
+}*/
+
+@media screen and (max-width:768px){
+    .Howto-page{
+    margin: 0px 0%;
+    background: none;
+}
+    .btn02{
+          display: block;
+      }
+    .btn01{
+          display: none;
+      }
+    .btn04{
+          display: block;
+      }
+    .btn03{
+          display: none;
+      }
+    .btn06{
+          display: block;
+      }
+    .btn05{
+          display: none;
+      }
+    .Howto-page{
+    margin: 0px 5%;
+    background: none;
+    margin-bottom: 150px
+}
+}
+</style>
+      
+  </head>
+  <body onLoad="MM_preloadImages('PICS/HOME/Icon-031-1.png','PICS/HOME/Icon-021-1.png','PICS/HOME/Icon-041-1.png')">
+  	<!-- body code goes here -->
+<div class="container-fluid" id="FRAME">
+
+    <!-- NAV -->
+
+    <a class="BTT" href="#top"><img src="PICS/Sushi7.gif" alt="" style="width: 150px"></a>
+    
+    <nav class="NAV" id="top">
+        <div class="container-fluid">
+            <div class="Nav-logo">
+                 <a href="Home.html"><img src="PICS/HOME/NAV/Logo.png" alt="" width="308"></a></div>
+            <form class="navbarform" role="X">
+                <input type="text" class="Search-bar" placeholder="SEARCH"><button type="submit" class="submit-search"><i class="glyphicon glyphicon-search"></i></button>
+                
+                <button type="submit" class="btnLogin"><a href="Login.html">LOGIN</a></button>
+                <ul id="M3L" class="Nav-Menu-Btn">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                
+            </form>
+            
+            <ul class="NAV-MENU" id="NAV">
+                <li><a href="Sitemap.html">SITEMAP</a></li>
+                <li class="active"><a href="Howto.html">HOW TO</a></li>
+                <li>VEGAN&#8629;
+                    <ul>
+                        <li><a href="Why.html">WHY</a></li>
+                        <li><a href="VGRecipes.html">RECIPES</a></li>
+                    </ul>
+                </li>
+                <li><a href="Contact.html">CONTACT</a></li>
+                <li><a href="Gallery.html">GALLERY</a>
+                
+                </li>
+                <li ><a href="Recipes.html">RECIPES</a></li>
+                <li><a href="About.html">ABOUT</a>
+                </li>
+            </ul>
+            
+            
+        </div>
+        
+        <!-- /.container-fluid -->
+    </nav>
+<!-- END NAV -->
+    
+<!--CONTENT  -->  
+    
+<div class="Howto-page">
+
+    <div class="row page-note">
+            <div class="col-xs-6" style="text-align: left; color: #FF9244; font-size: 30px; font-family: 'VL Selphia'"><p>Cooking Tips</p></div>
+            <div class="col-xs-6" style="text-align: right; cursor: pointer" id="page-note">PAGE NOTE <i class="glyphicon glyphicon-book" style="color: #FF9244"></i></div>
+            <div class="col-xs-12" id="page-note-text" style="text-align: justify">
+                <p>
+                Want to improve your cooking skills? Here you’ll find helpful cooking tips for beginners. Learn how to cook & store rice, how to wrap wontons, how to thinly slice meat etc.
+                </p>
+            </div>
+        </div>
+
+    <div class="row">
+    
+            <div class="col-md-8 col-sm-push-4 col-xs-12 col-sm-8 col-md-push-0">
+                <h5>How to make dashi</h5>
+                <p style="text-align: justify">Dashi (だし) is the basic stock used for Japanese cooking.  My best guess is if you are not familiar with Japanese ingredient, when you see “dashi” in my ingredient lists and you might have thought to yourself, what’s dashi… can I skip it?</p>
+                <button type="button" class="btn01">HOW TO?</button>
+            </div>
+            <div class="col-md-4 col-sm-pull-8 col-xs-12 col-sm-4 col-md-pull-0"><img src="PICS/HOWTO/Dashi-Ingredients-I.jpg" class=" img-responsive center-block" alt="Placeholder image">
+        <button type="button" class="btn02">HOW TO?</button>
+        </div>
+        
+        
+            <div class="col-xs-12 " style="padding-top: 20px; text-align: left" id="ingredient">
+                <div class="row">
+                    <div class="col-sm-5 col-xs-6">
+                    
+                        <h5>Ingredients</h5>
+
+                        <p style="padding: 0px; margin: 0px"><b>For Dashi Packet:</b></p>
+                        <p style="padding: 0px; margin: 0px"><input type="checkbox"> 2-3 cups water (420-720ml)</p>
+                        <p style="padding: 0px; margin: 0px"><input type="checkbox"> 1 dashi packet (9g)</p>
+
+                        <p style="padding: 0px; margin: 5px 0px 0px"><b>For Dashi Powder:</b></p>
+                        <p style="padding: 0px; margin: 0px"><input type="checkbox"> 2 cups water (420ml)</p>
+                        <p style="padding: 0px; margin: 0px"><input type="checkbox"> 1 tsp dashi powder (3g)</p>
+
+                        <p style="padding: 0px; margin: 5px 0px 0px"><b>For Homemade Dashi:</b></p>
+                        <p style="padding: 0px; margin: 0px"><input type="checkbox"> ⅓ oz kombu (dried kelp)(10g)</p>
+                        <p style="padding: 0px; margin: 0px"><input type="checkbox"> 4 cups water (roughly 1000ml)</p>
+                        <p style="padding: 0px; margin: 0px"><input type="checkbox"> 1-3 cups katsuobushi(10-30g)</p>
+                        
+ 
+                    
+                    </div>
+                    <div class="col-sm-2 col-xs-6">
+                        <h5>Recipe Notes</h5>
+                        <p style="padding: 0px; margin: 0px"><b>Water:</b> Use 2 cups of water for rich dashi and 3 cups for regular use. </p>
+                    
+                    </div>
+                    <div class="col-sm-5 col-xs-12">
+                        <h5>Instruction</h5>
+                        <p style="padding: 0px; margin: 0px">Please check out the video below</p>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <video class="embed-responsive-item" src="PICS/HOWTO/How To Make Dashi.mp4" controls></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+  
+    <div class="row">
+    
+            <div class="col-md-8 col-md-push-4 col-xs-12 col-sm-8 col-sm-push-0">
+                <h5>How to make baked bhicken katsu</h5>
+                <p style="text-align: justify">Juicy, tender, and crispy baked chicken katsu served with bright spring salad. In this recipe, chicken breast is coated in toasted panko and baked in the oven until golden brown. It makes a much healthier stand-in for greasy fried chicken. So simple and easy, you want to make this tonight</p>
+                <button type="button" class="btn03">HOW TO?</button>
+            </div>
+            <div class="col-md-4 col-md-pull-8 col-xs-12 col-sm-4 col-sm-pull-0"><img src="PICS/HOWTO/Baked-Chicken-Katsu.jpg" class=" img-responsive center-block" alt="Placeholder image">
+        <button type="button" class="btn04">HOW TO?</button>
+        </div>
+        
+        
+            <div class="col-xs-12" style="padding-top: 20px; text-align: left" id="ingredient01" >
+                <div class="row">
+                    <div class="col-sm-5 col-xs-12">
+                    
+                        <h5>Ingredients</h5>
+                        <p style="padding: 0px; margin: 0px"><input type="checkbox"> 1 cup panko</p>
+                        <p style="padding: 0px; margin: 0px"><input type="checkbox"> 1 Tbsp extra virgin olive oil</p>
+
+                        <p style="padding: 0px; margin: 0px"><input type="checkbox"> 1 lb boneless skinless chicken breast</p>
+                        <p style="padding: 0px; margin: 0px"><input type="checkbox"> Freshly ground black pepper</p>
+
+                        <p style="padding: 0px; margin: 0px"><input type="checkbox"> ¼ cup all-purpose flour</p>
+                        <p style="padding: 0px; margin: 0px"><input type="checkbox"> 1 large egg</p>
+                        <p style="padding: 0px; margin: 0px"><input type="checkbox">  1 Tbsp water</p>
+                        <p style="padding: 0px; margin: 0px"><input type="checkbox">   Tonkatsu sauce</p>
+                        
+ 
+                    
+                    </div>
+                    
+                    <div class="col-sm-7 col-xs-12">
+                        <h5>Instruction</h5>
+                        <p style="padding: 0px; margin: 0px">Please check out the video below</p>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <video class="embed-responsive-item" src="PICS/HOWTO/2.mp4" controls></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div class="row">
+    
+            <div class="col-md-8 col-sm-push-4 col-xs-12 col-sm-8 col-md-push-0">
+                <h5>How to make vegetarian ramen</h5>
+                <p style="text-align: justify">This Vegetarian Ramen recipe is going to rock your world! Learn the secret of creating a super rich & creamy broth without any meat bones. </p>
+                <button type="button" class="btn05">HOW TO?</button>
+            </div>
+            <div class="col-md-4 col-sm-pull-8 col-xs-12 col-sm-4 col-md-pull-0"><img src="PICS/HOWTO/Vegetarian-Ramen.jpg" class=" img-responsive center-block" alt="Placeholder image">
+        <button type="button" class="btn06">HOW TO?</button>
+        </div>
+        
+        
+            <div class="col-xs-12 " style="padding-top: 20px; text-align: left" id="ingredient02">
+                <div class="row">
+                    <div class="col-sm-7 col-xs-6">
+                    
+                        <h5>Ingredients</h5>
+
+                        <p style="padding: 0px; margin: 0px"><b>For Vegetarian Dashi:</b></p>
+                        <p style="padding: 0px; margin: 0px"><input type="checkbox"> 2-3 cups water (420-720ml)</p>
+                        <p style="padding: 0px; margin: 0px"><input type="checkbox"> 1 piece kombu (dried kelp)</p>
+                        <p style="padding: 0px; margin: 0px"><input type="checkbox"> 1 dried shiitake mushroom</p>
+
+                        <p style="padding: 0px; margin: 5px 0px 0px"><b>For Soup:</b></p>
+                        <p style="padding: 0px; margin: 0px"><input type="checkbox"> 2 cloves garlic</p>
+                        <p style="padding: 0px; margin: 0px"><input type="checkbox"> ½ inch ginger</p>
+                        <p style="padding: 0px; margin: 0px"><input type="checkbox"> green onion/scallion (use white part)</p>
+                        <p style="padding: 0px; margin: 0px"><input type="checkbox"> 1 Tbsp sake</p>
+                        <p style="padding: 0px; margin: 0px"><input type="checkbox"> Dash white pepper powder</p>
+
+                        <p style="padding: 0px; margin: 5px 0px 0px"><b>For Ramen:</b></p>
+                        <p style="padding: 0px; margin: 0px"><input type="checkbox"> 1 ramen noodles</p>
+                        
+ 
+                    
+                    </div>
+                    <div class="col-sm-5 col-xs-6">
+                        <h5>Recipe Notes</h5>
+                        <p style="padding: 0px; margin: 0px"><b>Serving Size:</b> If you want to make more than one serving, simply multiply the quantities of ingredients by the number of servings you wish to make. </p>
+                    
+                    </div>
+                    <div class="col-xs-12">
+                        <h5>Instruction</h5>
+                        <p style="padding: 0px; margin: 0px">Please check out the video below</p>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <video class="embed-responsive-item" src="PICS/HOWTO/How To Make Dashi.mp4" controls></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+    <nav>
+    <!-- Add class .pagination-lg for larger blocks or .pagination-sm for smaller blocks-->
+    <ul class="pagination">
+        <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+    </nav>
+</div>
+
+
+<!--END CONTENT-->
+    <footer class="Footer">
+        <img src="PICS/HOME/NAV/Logo.png" alt="" height="42">
+        
+        
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <h5>About Us</h5>
+                    <p>Whether you’re passionate about Japanese cuisine or simply looking to expand your skills in the kitchen and try something new, you will find Latocook to be a fascinating and reliable window into Japanese cooking and culture.</p>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    
+                    <h5>Contact Detail</h5>
+                    <p>Email: <br>1995nvc@gmail.com</p>
+                    <p>Mobile: <br>(+84) 981 82 3633</p>
+                    <p>Address: <br>Thu Duc District, HCMC, VN</p>
+                
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 icon">
+                    <h5>Social</h5>
+                        <div class="row">
+                            <div class="col-sm-4 col-xs-2">
+                                <img src="PICS/HOME/Icon-031.png" width="60" id="FB" onMouseOver="MM_swapImage('FB','','PICS/HOME/Icon-031-1.png',1)" onMouseOut="MM_swapImgRestore()">
+
+                            </div>
+                            <div class="col-sm-4 col-xs-2">
+
+                                <img src="PICS/HOME/Icon-021.png" width="60" id="IG" onMouseOver="MM_swapImage('IG','','PICS/HOME/Icon-021-1.png',1)" onMouseOut="MM_swapImgRestore()">
+
+                            </div>
+                            <div class="col-sm-4 col-xs-2">
+                           
+                                <img src="PICS/HOME/Icon-041.png" width="60" id="TW" onMouseOver="MM_swapImage('TW','','PICS/HOME/Icon-041-1.png',1)" onMouseOut="MM_swapImgRestore()">
+                            </div>
+                        </div>
+                        
+                </div>
+            
+            </div>
+        <div class="Copy-right">
+            Copyright © 2019 Latocook powered by CanhNguyen
+        </div>
+    
+            
+    </footer>
+    
+</div>
+    
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+  <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+          var F=1;
+      $(document).ready(function(){
+/*-----------------SORT -------------------*/       
+          
+          
+          
+/*------------HOME JQ-----------*/
+          
+          $("#M3L").click(function(){
+                if(F==1){
+                F=0;
+              
+                  $("#NAV").show();
+                    
+                }
+                else{
+                F=1;
+                   $("#NAV").hide();             
+                               
+                }
+              
+              });
+          
+          
+          $(window).on("resize load",function(){
+              var W = $(this).width();
+                if(W<=767){
+                F=1;
+                $("#M3L").show();
+                  $("#NAV").hide();
+                }
+                else{
+                F=0;
+                    $("#M3L").hide();
+                   $("#NAV").show();             
+                               
+                }
+              
+              });
+          
+          /* Back to top */
+          $(this).scroll(function(){
+           var YY = $(this).scrollTop();
+           if(YY>=200){
+               $(".BTT").fadeIn();
+           }
+           else{
+               $(".BTT").fadeOut();
+           }
+       })
+       $(".BTT").click(function(){
+           var target = $(this).attr("href");
+           $("html, body").animate ({scrollTop:
+                $(target).offset().top},1000);
+           
+       });
+          
+       
+/*------------END HOME JQ-----------*/  
+      
+
+   /*$(window).scroll(function() {
+     var ST = $(window).scrollTop();
+    var SH = $(window).height();
+       
+      
+     var P = $(".a");
+       if(ST > 50){
+            P.css({left:500})
+  
+       }
+       else{
+           P.css({left:200})
+       }
+     /*P.css({left:A});
+});*/
+          
+/* --------------------------------*/
+         $("#page-note").click(function(){
+             
+             $("#page-note-text").toggle(200)
+             
+         });
+          $(".btn01, .btn02").click(function(){
+             
+             $("#ingredient").toggle(200)
+             
+         });
+          
+          
+      
+        
+        
+          $(".btn03,.btn04").click(function(){
+             
+             $("#ingredient01").toggle(200)
+             
+         });
+          
+          $(".btn06,.btn05").click(function(){
+             
+             $("#ingredient02").toggle(200)
+             
+         });
+          
+          
+      });
+      
+      
+      </script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	 
+  <script src="js/bootstrap-3.4.0.js"></script>
+      
+  </body>
+</html>

@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'VL Selphia';
+	src: url('VL_Selphia.eot');
+	src: url('VL_Selphia.eot?#iefix') format('embedded-opentype'),
+		url('VL_Selphia.woff') format('woff'),
+		url('VL_Selphia.ttf') format('truetype'),
+		url('VL_Selphia.svg') format('svg');
+}
