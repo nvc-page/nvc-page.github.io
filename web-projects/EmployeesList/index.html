@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="js/jquery.min.1.7.js"></script>
+<link rel="stylesheet" href="css/basic.css">
+</head>
+<body>
+    <div class="btn-click">
+        <img src="btn-click01.png" alt="">
+        <img src="btn-click02.png" alt="">
+    </div>
+	<div class="lbl-calendar">
+		<span>2019</span>
+	</div>
+	<div class="txt-desc">
+		<p>
+			ワーキング・ホリデー制度とは，二つの国・地域間の取り決め等に基づき，各々の国・地域が，相手国・地域の青少年に対して自国・地域の文化や一般的な生活様式を理解する機会を提供するため，自国・地域において一定期間の休暇を過ごす活動とその間の滞在費を補うための就労を相互に認める制度です。 　我が国のワーキング・ホリデー制度は，1980年にオーストラリアとの間で開始されたことに始まり
+		</p>
+	</div>	
+	
+<div class="t">
+
+    <div class="tc rel">
+        
+        <div class="book" id="book">
+
+            <div class="page">
+                <div class="tracking-point"></div>
+                <img src="pages/List_COVER.png" alt="" />
+                
+            </div>
+            <div class="page"><img src="pages/List_PAGE01_1.png" alt="" /></div>
+            <div class="page"><img src="pages/List_PAGE01_2.png" alt="" /></div>
+            <div class="page"><img src="pages/List_PAGE02_1.png" alt="" /></div>
+            <div class="page"><img src="pages/List_PAGE02_2.png" alt="" /></div>
+            <div class="page"><img src="pages/List_PAGE03_1.png" alt="" /></div>
+            <div class="page"><img src="pages/List_PAGE03_2.png" alt="" /></div>
+            <div class="page"><img src="pages/List_PAGE04_1.png" alt="" /></div>
+            <div class="page"><img src="pages/List_PAGE04_2.png" alt="" /></div>
+            <div class="page"><img src="pages/List_PAGE05_1.png" alt="" /></div>
+            <div class="page"><img src="pages/List_PAGE05_2.png" alt="" /></div>
+            <div class="page"><img src="pages/List_PAGE06_1.png" alt="" /></div>
+            <div class="page"><img src="pages/List_PAGE06_2.png" alt="" /></div>
+            <div class="page"><img src="pages/List_PAGE07_1.png" alt="" /></div>
+            <div class="page"><img src="pages/List_PAGE07_2.png" alt="" /></div>
+            <div class="page"><img src="pages/List_PAGE08_1.png" alt="" /></div>
+            <div class="page"><img src="pages/List_PAGE08_2.png" alt="" /></div>
+            <div class="page"><img src="pages/List_PAGE09_1.png" alt="" /></div>
+            <div class="page"><img src="pages/List_PAGE09_2.png" alt="" /></div>
+        </div>
+    </div>
+</div>
+
+	
+	
+</body>
+<script type="text/javascript" src="js/turn.js"></script>
+<script>
+(function () {
+    'use strict';
+
+    var module = {
+        ratio: 1.38,
+        init: function (id) {
+            var me = this;
+
+            // if older browser then don't run javascript
+            if (document.addEventListener) {
+                this.el = document.getElementById(id);
+                this.resize();
+                this.plugins();
+
+                // on window resize, update the plugin size
+                window.addEventListener('resize', function (e) {
+                    var size = me.resize();
+                    $(me.el).turn('size', size.width, size.height);
+                });
+            }
+        },
+        resize: function () {
+            // reset the width and height to the css defaults
+            this.el.style.width = '';
+            this.el.style.height = '';
+
+            var width = this.el.clientWidth,
+                height = Math.round(width / this.ratio),
+                padded = Math.round(document.body.clientHeight * 0.9);
+
+            // if the height is too big for the window, constrain it
+            if (height > padded) {
+                height = padded;
+                width = Math.round(height * this.ratio);
+            }
+
+            // set the width and height matching the aspect ratio
+            this.el.style.width = width + 'px';
+            this.el.style.height = height + 'px';
+
+            return {
+                width: width,
+                height: height
+            };
+        },
+        plugins: function () {
+            // run the plugin
+            $(this.el).turn({
+                gradients: true,
+                acceleration: true
+            });
+            // hide the body overflow
+            document.body.className = 'hide-overflow';
+        }
+    };
+
+    module.init('book');
+}());
+</script>
+<script>
+	var F = 0;
+	var Fx = 0;
+	$(document).ready(function(){
+		$(".book").click(function(){
+			var pageX = $(".book").turn("page");
+			if(pageX==2 && F==0){
+			   		$(".txt-desc, .lbl-calendar, .btn-click").addClass("hide_text");
+					F=1;
+			   }
+			else if(pageX==1 && F==1){
+			   		$(".txt-desc, .lbl-calendar, .btn-click").removeClass("hide_text");
+					F=0;
+			   }
+//			else if(pageX==1 && Fx==0){
+//			   		$(".txt-desc, .lbl-calendar").addClass("hide_text");
+//					Fx=1;
+//					}
+//			else if(pageX==1 && Fx==1){
+//			   		$(".txt-desc, .lbl-calendar").removeClass("hide_text");
+//					Fx=0;
+//			   };
+			console.log(pageX)
+			
+		});
+
+
+		
+		$(window).on("load resize", function() {                          	
+		var x = $(".tracking-point");  
+			var bx = x.offset().left;
+			var by = x.offset().top;
+			$(".btn-click").css({"top":by,"left":bx+150})
+			console.log("Top: " + by + " Left: " + bx);
+		}); 
+		
+//		$( ".btn-click" ).hover(
+//			function() {
+//				$(".btn-click").fadeOut()
+//			}, function() {
+//				$(".btn-click").fadeIn()
+//			}
+//		);
+		
+	});
+</script>
+</html>
