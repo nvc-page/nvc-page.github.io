@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'VNI Avo';
+	src: url('VNI-Avo.eot');
+	src: url('VNI-Avo.eot?#iefix') format('embedded-opentype'),
+		url('VNI-Avo.woff') format('woff'),
+		url('VNI-Avo.ttf') format('truetype'),
+		url('VNI-Avo.svg') format('svg');
+}
