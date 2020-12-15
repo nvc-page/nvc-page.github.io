@@ -45,9 +45,11 @@
   width: 100%;
   height: 190px;
 }
+#snowfall-0{background: transparent right -120px no-repeat;background-size:400px;pointer-events:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999999}
 </style>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+<canvas class="snowfall hidden-xs" id="snowfall-0" width="709" height="993"></canvas>                                                                          
 <nav id="nvc-main-nav" role="navigation"> <a href="#" class="js-nvc-nav-toggle nvc-nav-toggle active"><i></i></a>
   <div class="js-fullheight nvc-table">
     <div class="nvc-table-cell js-fullheight">
@@ -318,7 +320,7 @@
 
   gtag('config', 'UA-147229199-2');
 </script>
-
+<script type="text/javascript"> (function(){var requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame|| function(callback){window.setTimeout(callback,1000/60)};window.requestAnimationFrame=requestAnimationFrame})(); var flakes=[],canvas=document.getElementById("snowfall-0"),ctx=canvas.getContext("2d"),flakeCount=250,mX=-100,mY=-100;canvas.width=window.innerWidth;canvas.height=window.innerHeight; function snow(){ctx.clearRect(0,0,canvas.width,canvas.height); for (var i=0;i<flakeCount;i++){var flake=flakes[i],x=mX,y=mY,minDist=Math.random()*200+100,x2=flake.x,y2=flake.y,dist=Math.sqrt((x2-x)*(x2-x)+(y2-y)*(y2-y)),dx=x2-x,dy=y2-y; if(dist<minDist){var force=minDist/(dist*dist),xcomp=(x-x2)/dist,ycomp=(y-y2)/dist,deltaV=force/2;flake.velX-=deltaV*xcomp;flake.velY-=deltaV*ycomp} else{flake.velX*=.98;if(flake.velY<=flake.speed){flake.velY=flake.speed}flake.velX+=Math.cos(flake.step+=(.05))*flake.stepSize;flake.stepSize-=((Math.random()*2)*flake.stepSize*flake.size/1700)} ctx.fillStyle="rgba(255,255,255,"+flake.opacity+")";flake.y+=flake.velY;flake.x+=flake.velX;if(flake.y>=canvas.height||flake.y<=0){reset(flake)}/*if(flake.x>=canvas.width||flake.x<=0){reset(flake)}*/ ctx.beginPath();ctx.arc(flake.x,flake.y,flake.size,0,Math.PI*2);ctx.fill()}requestAnimationFrame(snow)}; function reset(flake){flake.speed=(Math.random()*0.25)+1;flake.x=Math.floor(Math.random()*canvas.width);flake.y=0;flake.size=(Math.random()*3)+1;flake.stepSize=(Math.random()*2-1)/(Math.random()*10+20);flake.velY=flake.speed;flake.velX=0;flake.opacity=(Math.random()*0.5)+0.3}; function init() {for(var i=0;i<flakeCount;i++){ var speed=(Math.random()*0.25)+1,x=Math.floor(Math.random()*canvas.width),y=Math.floor(Math.random()*canvas.height),size=(Math.random()*3)+1,opacity=(Math.random()*0.5)+0.3; flakes.push({speed:speed,velY:speed,velX:0,x:x,y:y,size:size,stepSize:(Math.random()*2-1)/(Math.random()*10+20),step:Math.random()*15-1,opacity:opacity})}snow()}; window.addEventListener("resize",function(){canvas.width=window.innerWidth;canvas.height=window.innerHeight});init(); </script>
 </html>
 
 
