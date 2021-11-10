@@ -56,6 +56,9 @@ function countDown() {
     var url = 'https://bsc-dataseed.binance.org/';
     var params = '{"jsonrpc":"2.0","id":256,"method":"eth_blockNumber","params":[]}y';
     http.open('POST', url, true);
+    
+
+    
 
     //Send the proper header information along with the request
     http.setRequestHeader('Content-type', 'application/json');
@@ -63,14 +66,27 @@ function countDown() {
     http.onreadystatechange = function() {//Call a function when the state changes.
         if(http.readyState == 4 && http.status == 200) {
             var result = JSON.parse(http.responseText);
+            //var totalSeconds = countBlockNumber - parseInt(result.result, 16))*3;
+                        
+            
+
+    
             document.getElementById("displayDivCurrentBlock").innerHTML =parseInt(result.result, 16);
             document.getElementById("displayDivBlock").innerHTML =countBlockNumber - parseInt(result.result, 16);
-            document.getElementById("displayDivTime").innerHTML =((countBlockNumber - parseInt(result.result, 16))*3)+"s";
+            document.getElementById("displayDivTime").innerHTML =
+            
+              Math.floor(((countBlockNumber - parseInt(result.result, 16))*3)/3600) + " : "
+            + Math.floor(((countBlockNumber - parseInt(result.result, 16))*3)/60)% 60 + " : "
+            + ((countBlockNumber - parseInt(result.result, 16))*3) % 60;
+            
+            
         }
     }
     http.send(params);
 }
-setInterval(function(){ countDown(); }, 1000);
+setInterval(function(){ countDown(); }, 500);
+
+
 
 </script>
 </html>
