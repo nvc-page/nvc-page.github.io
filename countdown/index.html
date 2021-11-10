@@ -21,35 +21,78 @@
 
 <style>
 
-#displayDivBlock{
-  font-size:60px;
+#displayDivBlock, #displayDivBlock2, #displayDivBlock3, #displayDivTime{
+  
     text-align:center;
+}
+#displayDivBlock{
+  font-size:40px;
     
 }
-
-
 
 </style>
 <body>
 <br>
 <div class="container">
 <p style="text-align:center"><strong>Blockchain Block Countdown</strong></p>
+<br>
 <div class="form-group">
-<input type = "text" class="form-control input-lg" id="countBlockNumber" placeholder="Enter your block...">
+<input type = "text" class="form-control input-lg" id="countBlockNumber" placeholder="Enter your block..." value="14000000">
 </div>
 
 <div class="form-group">
 <input type="button" class="form-control input-lg" value="Count Down" onclick="startCountDown()" />
 </div>
-<strong><div style="text-align:center" id="displayDivCurrentBlock" class="text-primary"></div></strong>
-<strong><div id="displayDivBlock" class="text-primary"></div></strong>
-<strong><div style="text-align:center" id="displayDivTime" class="text-primary"></div></strong>
+<strong>
 
+<div style="text-align:center" id="displayDivCurrentBlock" ></div>
+<div id="displayDivBlock" ></div>
+<div id="displayDivTime" ></div>
+<br>
+<div class="container">
+    
+    <div id="displayDivBlock3" class="text-primary col-xs-6"></div>
+    <div id="displayDivBlock2" class="text-primary col-xs-6"></div>
+</div>
 
+</strong>
+
+<br>
+<br>
+<p style="text-align:center"><strong>BSC Gasfee Calculator</strong></p>
+<br>
+</div>
+<div class="container">
+<form>
+    <div class="form-group row">
+      <div class="col-xs-4">
+        <label for="ex1">Gas Limit</label>
+        <input class="form-control input-lg" id="gasLimit" type="number" value="500000" step="50000">
+      </div>
+      <div class="col-xs-4">
+        <label for="ex2">Gas Weight</label>
+        <input class="form-control input-lg" id="gasWeight" type="number" value="5">
+      </div>
+      <div class="col-xs-4">
+        <label for="ex3">Bnb</label>
+        <input class="form-control input-lg" id="gasPrice" type="number" disabled>
+      </div>
+    </div>
+  </form>
 </div>
 </body>
 <script>
-function startCountDown() {
+
+function gasPrice(){
+    var x = document.getElementById("gasWeight").value;
+    var y = document.getElementById("gasLimit").value;
+    document.getElementById("gasPrice").value=x*y*0.000000001;
+    console.log(x);
+}
+setInterval(function(){ gasPrice(); }, 1000);
+
+
+//function startCountDown() {
 function countDown() {
 
   var countBlockNumber = document.getElementById("countBlockNumber").value;
@@ -68,12 +111,11 @@ function countDown() {
         if(http.readyState == 4 && http.status == 200) {
             var result = JSON.parse(http.responseText);
             
-                        
-            
-
     
             document.getElementById("displayDivCurrentBlock").innerHTML =parseInt(result.result, 16);
+
             document.getElementById("displayDivBlock").innerHTML =countBlockNumber - parseInt(result.result, 16);
+
             document.getElementById("displayDivTime").innerHTML =
             Math.floor(((countBlockNumber - parseInt(result.result, 16))*3)/86400) + " Days : "
             +
@@ -85,10 +127,57 @@ function countDown() {
         }
     }
     http.send(params);
-}
+};
+
 setInterval(function(){ countDown(); }, 500);
 
+
+function countDown2() {
+
+var countBlockNumber = document.getElementById("countBlockNumber").value;
+  var http = new XMLHttpRequest();
+  var url = 'https://bsc-dataseed1.defibit.io/';
+  var params = '{"jsonrpc":"2.0","id":256,"method":"eth_blockNumber","params":[]}y';
+  http.open('POST', url, true);
+  
+
+  
+
+  //Send the proper header information along with the request
+  http.setRequestHeader('Content-type', 'application/json');
+
+  http.onreadystatechange = function() {//Call a function when the state changes.
+      if(http.readyState == 4 && http.status == 200) {
+          var result = JSON.parse(http.responseText);
+          document.getElementById("displayDivBlock2").innerHTML =countBlockNumber - parseInt(result.result, 16);
+      }
+  }
+  http.send(params);
 }
+setInterval(function(){ countDown2(); }, 500);
+
+function countDown3() {
+
+var countBlockNumber = document.getElementById("countBlockNumber").value;
+  var http = new XMLHttpRequest();
+  var url = 'https://bsc-dataseed1.ninicoin.io/';
+  var params = '{"jsonrpc":"2.0","id":256,"method":"eth_blockNumber","params":[]}y';
+  http.open('POST', url, true);
+  
+  //Send the proper header information along with the request
+  http.setRequestHeader('Content-type', 'application/json');
+
+  http.onreadystatechange = function() {//Call a function when the state changes.
+      if(http.readyState == 4 && http.status == 200) {
+          var result = JSON.parse(http.responseText);
+          document.getElementById("displayDivBlock3").innerHTML =countBlockNumber - parseInt(result.result, 16);
+      }
+  }
+  http.send(params);
+}
+setInterval(function(){ countDown3(); }, 500);
+
+//}
 
 </script>
 </html>
