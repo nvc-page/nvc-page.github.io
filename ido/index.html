@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme The Band</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+      #displayDivBlock, #displayDivBlock2, #displayDivBlock3, #displayDivTime{
+  
+  text-align:center;
+}
+#displayDivBlock{
+font-size:40px;
+  
+}
+      #tour p, h4{
+  
+  text-align:center;
+}
+
+    #tour .container{
+        /* background-color: #333!important; */
+        padding:10px;
+        margin-bottom: 80px ;
+    }
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+  }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  /* .container {
+    padding: 80px 120px;
+  } */
+  #band .container{
+    padding:10px;
+    margin: 20px 0 40px 0;
+  }
+  #band h4, #tour h4{
+      /* background-color: white!important; */
+      color:white!important;
+      font-size: 30px;
+  }
+  #tour {
+      color: white!important;
+      height: 100vh;
+      background-image: url(https://cdn.pixabay.com/photo/2016/12/29/18/44/background-1939128_1280.jpg);
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center;
+  }
+  #band {
+      color: white!important;
+      height: 100vh;
+      background-image: url(https://cdn.pixabay.com/photo/2016/12/29/18/44/background-1939128_1280.jpg);
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center;
+  }
+  #band .inner{
+    position: relative;
+    top: 50%;
+    left:50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+  #tour .inner{
+    position: relative;
+    top: 50%;
+    left:50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">ᴇᴅᴡᴀʀᴅ🪁</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#band">BLOCK COUNTDOWN</a></li>
+        <li><a href="#tour">CLAIM IDO</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div id="band" class="container-fluid" >
+    <div class="container inner text-center">
+    <h4 style="text-align:center;"><strong>BLOCKCHAIN BLOCK COUNTDOWN</strong></h4>
+    <br>
+    <div class="form-group">
+    <input type = "text" class="form-control input-lg text-center " id="countBlockNumber" placeholder="Enter your block..." value="13257686">
+    </div>
+    
+    <div class="form-group">
+    <!-- <input type="button" class="form-control input-lg" value="Count Down" onclick="startCountDown()" /> -->
+    </div>
+    <strong>
+    
+    <div style="text-align:center" id="displayDivCurrentBlock" ></div>
+    <div id="displayDivBlock" ></div>
+    <div id="displayDivTime" ></div>
+    <br>
+    <div class="row">
+        <div id="displayDivBlock3" class="col-xs-6"></div>
+        <div id="displayDivBlock2" class="col-xs-6"></div>
+    </div>
+    
+    </strong>
+
+  </div>
+    
+</div>
+
+<!-- Container (TOUR Section) -->
+<div id="tour" class="bg-1">
+
+    <div class="container inner col-xs-12" >
+        <br>
+        <h4><strong>CLAIM IDO TIME COUNTDOWN</strong></h4>
+        <br>
+        
+        <p><strong>Ninneko - 5% TGE then 9.5% each month after<strong></p>
+        <p id="Ninneko"></p>
+        <p class="text-center">-----</p>
+        
+        <p><strong>DragonKart - TGE 33%, then each month 33%<strong></p>
+        <p id="DragonKart"></p>
+        <p class="text-center">-----</p>
+        
+        <p><strong>Moniwar - 25% TGE, cliff for 1 month, then 25% each month after<strong></p>
+        <p id="Moniwar"></p>
+        <p class="text-center">-----</p>
+        
+        <p><strong>Dynasty - TGE 10%, then each month 10%<strong></p>
+        <p id="Dynasty"></p>
+        <p class="text-center">-----</p>
+        <p><strong>Heron - 10% TGE, cliff for 1 month, then 7.5% each month after<strong></p>
+        <p id="Heron"></p>
+        <br>
+        
+        </div>
+  </div>
+
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Made By <a href="https://t.me/heisca" data-toggle="tooltip" title="Text Him">ᴇᴅᴡᴀʀᴅ🪁</a></p> 
+</footer>
+<script>
+    // Set the date we're counting down to
+    var countDownDateX = new Date("Tue Dec 14 2021 18:30:03").getTime();
+    
+    // Update the count down every 1 second
+    var xX = setInterval(function() {
+    
+      // Get today's date and time
+      var nowX = new Date().getTime();
+        
+      // Find the distance between now and the count down date
+      var distanceX = countDownDateX - nowX;
+        
+      // Time calculations for days, hours, minutes and seconds
+      var daysX = Math.floor(distanceX / (1000 * 60 * 60 * 24));
+      var hoursX = Math.floor((distanceX % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutesX = Math.floor((distanceX % (1000 * 60 * 60)) / (1000 * 60));
+      var secondsX = Math.floor((distanceX % (1000 * 60)) / 1000);
+        
+      // Output the result in an element with id="demo"
+      document.getElementById("Moniwar").innerHTML = daysX + "d " + hoursX + "h "
+      + minutesX + "m " + secondsX + "s ";
+        
+      // If the count down is over, write some text 
+      if (distanceX < 0) {
+        clearInterval(xX);
+        document.getElementById("Moniwar").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+    </script>
+    
+    <script>
+    
+    
+    // Set the date we're counting down to
+    var countDownDateA = new Date("Wed Jan 05 2022 12:47:31").getTime();
+    
+    // Update the count down every 1 second
+    var xA = setInterval(function() {
+    
+      // Get today's date and time
+      var nowA = new Date().getTime();
+        
+      // Find the distance between now and the count down date
+      var distanceA = countDownDateA - nowA;
+        
+      // Time calculations for days, hours, minutes and seconds
+      var daysA = Math.floor(distanceA / (1000 * 60 * 60 * 24));
+      var hoursA = Math.floor((distanceA % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutesA = Math.floor((distanceA % (1000 * 60 * 60)) / (1000 * 60));
+      var secondsA = Math.floor((distanceA % (1000 * 60)) / 1000);
+        
+      // Output the result in an element with id="demo"
+      document.getElementById("Heron").innerHTML = daysA + "d " + hoursA + "h "
+      + minutesA + "m " + secondsA + "s ";
+        
+      // If the count down is over, write some text 
+      if (distanceA < 0) {
+        clearInterval(xA);
+        document.getElementById("Heron").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+    </script>
+    
+    <script>
+    
+    
+    // Set the date we're counting down to
+    var countDownDateS = new Date("Tue Dec 07 2021 18:32:31").getTime();
+    
+    // Update the count down every 1 second
+    var xS = setInterval(function() {
+    
+      // Get today's date and time
+      var nowS = new Date().getTime();
+        
+      // Find the distance between now and the count down date
+      var distanceS = countDownDateS - nowS;
+        
+      // Time calculations for days, hours, minutes and seconds
+      var daysS = Math.floor(distanceS / (1000 * 60 * 60 * 24));
+      var hoursS = Math.floor((distanceS % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutesS = Math.floor((distanceS % (1000 * 60 * 60)) / (1000 * 60));
+      var secondsS = Math.floor((distanceS % (1000 * 60)) / 1000);
+        
+      // Output the result in an element with id="demo"
+      document.getElementById("Ninneko").innerHTML = daysS + "d " + hoursS + "h "
+      + minutesS + "m " + secondsS + "s ";
+        
+      // If the count down is over, write some text 
+      if (distanceS < 0) {
+        clearInterval(xS);
+        document.getElementById("Ninneko").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+    </script>
+    
+    <script>
+    
+    
+    // Set the date we're counting down to
+    var countDownDateSx = new Date("Tue Dec 14 2021 06:00:47").getTime();
+    
+    // Update the count down every 1 second
+    var xSx = setInterval(function() {
+    
+      // Get today's date and time
+      var nowSx = new Date().getTime();
+        
+      // Find the distance between now and the count down date
+      var distanceSx = countDownDateSx - nowSx;
+        
+      // Time calculations for days, hours, minutes and seconds
+      var daysSx = Math.floor(distanceSx / (1000 * 60 * 60 * 24));
+      var hoursSx = Math.floor((distanceSx % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutesSx = Math.floor((distanceSx % (1000 * 60 * 60)) / (1000 * 60));
+      var secondsSx = Math.floor((distanceSx % (1000 * 60)) / 1000);
+        
+      // Output the result in an element with id="demo"
+      document.getElementById("DragonKart").innerHTML = daysSx + "d " + hoursSx + "h "
+      + minutesSx + "m " + secondsSx + "s ";
+        
+      // If the count down is over, write some text 
+      if (distanceSx < 0) {
+        clearInterval(xS);
+        document.getElementById("DragonKart").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+    </script>
+    
+    <script>
+    
+    
+    // Set the date we're counting down to
+    var countDownDateSxa = new Date("Wed Dec 15 2021 07:26:36").getTime();
+    
+    // Update the count down every 1 second
+    var xSxa = setInterval(function() {
+    
+      // Get today's date and time
+      var nowSxa = new Date().getTime();
+        
+      // Find the distance between now and the count down date
+      var distanceSxa = countDownDateSxa - nowSxa;
+        
+      // Time calculations for days, hours, minutes and seconds
+      var daysSxa = Math.floor(distanceSxa / (1000 * 60 * 60 * 24));
+      var hoursSxa = Math.floor((distanceSxa % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutesSxa = Math.floor((distanceSxa % (1000 * 60 * 60)) / (1000 * 60));
+      var secondsSxa = Math.floor((distanceSxa % (1000 * 60)) / 1000);
+        
+      // Output the result in an element with id="demo"
+      document.getElementById("Dynasty").innerHTML = daysSxa + "d " + hoursSxa + "h "
+      + minutesSxa + "m " + secondsSxa + "s ";
+        
+      // If the count down is over, write some text 
+      if (distanceSxa < 0) {
+        clearInterval(xSa);
+        document.getElementById("Dynasty").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+    </script>
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+<script>
+
+    function gasPrice(){
+        var x = document.getElementById("gasWeight").value;
+        var y = document.getElementById("gasLimit").value;
+        document.getElementById("gasPrice").value=x*y*0.000000001;
+        console.log(x);
+    }
+    setInterval(function(){ gasPrice(); }, 1000);
+    
+    
+    //function startCountDown() {
+    function countDown() {
+    
+      var countBlockNumber = document.getElementById("countBlockNumber").value;
+        var http = new XMLHttpRequest();
+        var url = 'https://bsc-dataseed.binance.org/';
+        var params = '{"jsonrpc":"2.0","id":256,"method":"eth_blockNumber","params":[]}y';
+        http.open('POST', url, true);
+        
+    
+        
+    
+        //Send the proper header information along with the request
+        http.setRequestHeader('Content-type', 'application/json');
+    
+        http.onreadystatechange = function() {//Call a function when the state changes.
+            if(http.readyState == 4 && http.status == 200) {
+                var result = JSON.parse(http.responseText);
+                
+        
+                document.getElementById("displayDivCurrentBlock").innerHTML =parseInt(result.result, 16);
+    
+                document.getElementById("displayDivBlock").innerHTML =countBlockNumber - parseInt(result.result, 16);
+    
+                document.getElementById("displayDivTime").innerHTML =
+                Math.floor(((countBlockNumber - parseInt(result.result, 16))*3)/86400) + " Days : "
+                +
+                Math.floor(((countBlockNumber - parseInt(result.result, 16))*3)/3600)%24 + " Hours : "
+                + Math.floor(((countBlockNumber - parseInt(result.result, 16))*3)/60)% 60 + " Mins : "
+                + ((countBlockNumber - parseInt(result.result, 16))*3) % 60+" Secs";
+                
+                
+            }
+        }
+        http.send(params);
+    };
+    
+    setInterval(function(){ countDown(); }, 500);
+    
+    
+    function countDown2() {
+    
+    var countBlockNumber = document.getElementById("countBlockNumber").value;
+      var http = new XMLHttpRequest();
+      var url = 'https://bsc-dataseed1.defibit.io/';
+      var params = '{"jsonrpc":"2.0","id":256,"method":"eth_blockNumber","params":[]}y';
+      http.open('POST', url, true);
+      
+    
+      
+    
+      //Send the proper header information along with the request
+      http.setRequestHeader('Content-type', 'application/json');
+    
+      http.onreadystatechange = function() {//Call a function when the state changes.
+          if(http.readyState == 4 && http.status == 200) {
+              var result = JSON.parse(http.responseText);
+              document.getElementById("displayDivBlock2").innerHTML =countBlockNumber - parseInt(result.result, 16);
+          }
+      }
+      http.send(params);
+    }
+    setInterval(function(){ countDown2(); }, 500);
+    
+    function countDown3() {
+    
+    var countBlockNumber = document.getElementById("countBlockNumber").value;
+      var http = new XMLHttpRequest();
+      var url = 'https://bsc-dataseed1.ninicoin.io/';
+      var params = '{"jsonrpc":"2.0","id":256,"method":"eth_blockNumber","params":[]}y';
+      http.open('POST', url, true);
+      
+      //Send the proper header information along with the request
+      http.setRequestHeader('Content-type', 'application/json');
+    
+      http.onreadystatechange = function() {//Call a function when the state changes.
+          if(http.readyState == 4 && http.status == 200) {
+              var result = JSON.parse(http.responseText);
+              document.getElementById("displayDivBlock3").innerHTML =countBlockNumber - parseInt(result.result, 16);
+          }
+      }
+      http.send(params);
+    }
+    setInterval(function(){ countDown3(); }, 500);
+    
+    //}
+    
+    </script>
+</body>
+</html>
