@@ -1,5 +1,6 @@
 jQuery(document).ready(function ($) {
 	var request;
+
 	$("#formCreate").submit(function (event) {
 		if (request) {
 			request.abort()
@@ -18,7 +19,8 @@ jQuery(document).ready(function ($) {
 			$('#result').html('<a href="https://docs.google.com/spreadsheets/d/1_8Acmn17MUifXDCFK_lgFMyo9kNHaitI86IQ3-_qnWc/edit?usp=sharing" target="_blank">Success - see Google Sheet</a>');
 			console.log("Created.");
 			resetForm();
-			$("#btnRetrieve").click()
+			$("#btnRetrieve").click();
+			alert("Create Successfully!!");
 		});
 		request.fail(function (jqXHR, textStatus, errorThrown) {
 			console.error("The following error occured: " + textStatus, errorThrown)
@@ -27,7 +29,9 @@ jQuery(document).ready(function ($) {
 			$inputs.prop("disabled", !1)
 		});
 		event.preventDefault()
+		
 	});
+	
 	$("#formRetrieve").submit(function (event) {
 		if (request) {
 			request.abort()
@@ -55,16 +59,19 @@ jQuery(document).ready(function ($) {
 					tdHTML = tdHTML.replace(/td>/gi, "th>")
 				} else {
 					tdHTML += "<td ><button class='btn btn-primary' onclick='recordDelete(this)'>Delete</button></td>";
-					//tdHTML += "<td ><button class='btn btn-primary' onclick='recordEdit(this)'>Edit</button></td>"
+					tdHTML += "<td ><button class='btn btn-primary' onclick='recordEdit(this)'>Edit</button></td>"
 				}
 				for (j = 0; j < item.length; j++) {
-					tdHTML += "<td>" + item[j] + "</td>"
+					tdHTML += "<td style='width:200px'>" + item[j] + "</td>"
 				}
 				trHTML += "<tr>" + tdHTML + "</tr>"
+				
 			});
+			$('#framenvc').css({"height": "600px","overflow": "scroll"});
 			$('#datatable').append(trHTML);
 			$('#messageRetrieve').text('');
-			$('#messageRetrieve')[0].scrollIntoView(!1)
+			$('#messageRetrieve')[0].scrollIntoView(!1);
+			
 		});
 		request.fail(function (jqXHR, textStatus, errorThrown) {
 			console.error("The following error occured: " + textStatus, errorThrown)
@@ -74,6 +81,8 @@ jQuery(document).ready(function ($) {
 		});
 		event.preventDefault()
 	});
+
+
 	$("#formUpdate").submit(function (event) {
 		if (request) {
 			request.abort()
@@ -84,6 +93,7 @@ jQuery(document).ready(function ($) {
 		$inputs.prop("disabled", !0);
 		resetForm();
 		$('#messageUpdate').text('Updating data...');
+		
 		request = $.ajax({
 			url: "https://script.google.com/macros/s/AKfycbxa2Zn-LoeWrceHLsrqIO9fP_G51JztyRf6w1ri0PgtWPdnpV7D/exec",
 			type: "post",
@@ -94,7 +104,8 @@ jQuery(document).ready(function ($) {
 			console.log("Updated.");
 			resetForm();
 			$('#messageUpdate').text('');
-			$("#btnRetrieve").click()
+			$("#btnRetrieve").click();
+			alert("Update Successfully!!");
 		});
 		request.fail(function (jqXHR, textStatus, errorThrown) {
 			console.error("The following error occured: " + textStatus, errorThrown)
@@ -102,8 +113,11 @@ jQuery(document).ready(function ($) {
 		request.always(function () {
 			$inputs.prop("disabled", !1)
 		});
-		event.preventDefault()
+		event.preventDefault();
+		
 	});
+
+
 	$("#formDelete").submit(function (event) {
 		if (request) {
 			request.abort()
@@ -123,7 +137,8 @@ jQuery(document).ready(function ($) {
 			$('#result').html('<a href="https://docs.google.com/spreadsheets/d/1_8Acmn17MUifXDCFK_lgFMyo9kNHaitI86IQ3-_qnWc/edit?usp=sharing" target="_blank">Success - see Google Sheet</a>');
 			resetForm();
 			$('#messageDelete').text('');
-			$("#btnRetrieve").click()
+			$("#btnRetrieve").click();
+			alert("Delete Successfully!!");
 		});
 		request.fail(function (jqXHR, textStatus, errorThrown) {
 			console.error("The following error occured: " + textStatus, errorThrown)
@@ -136,22 +151,28 @@ jQuery(document).ready(function ($) {
 });
 
 function recordEdit(param) {
+	$('#formUpdate').css({"display": "block","overflow": "scroll"});
 	var arrRecord = [];
 	$(param).closest('tr').find('td').not(':first').each(function () {
 		arrRecord.push($(this).html())
 	});
 	$("#formUpdate #tid").val(arrRecord[1]);
 	$("#formUpdate #name").val(arrRecord[2]);
-	//$("#formUpdate #edcomment").val(arrRecord[3]);
+	$("#formUpdate #edcomment").val(arrRecord[3]);
 	$("#formUpdate #note").val(arrRecord[4]);
 	$("#formUpdate #imgurl").val(arrRecord[6]);
-	CKEDITOR.instances.edcategory.insertHtml(arrRecord[5]);
-	CKEDITOR.instances.edcomment.insertHtml(arrRecord[3]);
+	//CKEDITOR.instances.edcategory.insertHtml(arrRecord[3]);
+	
+	CKEDITOR.instances.edcomment.setData(arrRecord[3]);
 	$('#formUpdate')[0].scrollIntoView()
+	console.log(arrRecord[3])
+	
 };
 
 function recordDelete(param) {
+	
 	resetForm();
+	
 	var arrRecord = [];
 	$(param).closest('tr').find('td').not(':first').each(function () {
 		arrRecord.push($(this).text())
@@ -159,6 +180,7 @@ function recordDelete(param) {
 	$("#formDelete #dtid").val(arrRecord[1]);
 	$("#formDelete #dname").val(arrRecord[2]);
 	$('#formDelete')[0].scrollIntoView()
+	
 };
 
 function resetForm() {
@@ -171,5 +193,6 @@ function resetForm() {
 	CKEDITOR.instances.category.setData('');
 	CKEDITOR.instances.edcategory.setData('')
 	CKEDITOR.instances.comment.setData('');
-	CKEDITOR.instances.edcomment.setData('')
+	CKEDITOR.instances.edcomment.setData('');
+	$('#formUpdate').css({"display": "none","overflow": "scroll"});
 }
