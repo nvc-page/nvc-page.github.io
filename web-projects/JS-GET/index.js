@@ -106,7 +106,8 @@
       var tdHTML="";     
       //prepare first two columns
       if (i==0){
-        tdHTML= "<td>Delete</td><td>Edit</td>" + tdHTML;
+        tdHTML= "<td>Delete</td>" + tdHTML;
+	      //<td>Edit</td>
         tdHTML=tdHTML.replace(/td>/gi,"th>");
       }else{
         tdHTML+= "<td><button onclick='recordDelete(this)'>delete</button></td>";
