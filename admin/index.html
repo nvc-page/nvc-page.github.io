@@ -10,145 +10,24 @@
     <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
 </head>
 <style>
-textarea {
-   resize: none; /* user can resize vertically, but width is fixed */
-   margin-bottom: 30px;
-   padding:0px 0px;
-   /* height: 50px; */
-   background: rgba(0, 0, 0, 0.00);
-   border: 2px solid coral;
-   border-top: none;
-   border-right: none ;
-   transition: all .5s;
-   border-left: none ;
-}
-textarea:focus{
-   /* background: rgba(255, 127, 80, 0.5); */
-   color: darkgray;
-   border: 2px solid coral;
-   border-top: none;
-   border-left: none ;
-   border-right: none ;
-}
-button[type=submit].col-xs-6{
-   height: 40px;
-   padding: 0px 20px;
-   background:white;
-   color: coral;
-   border: 1px solid coral;
-}
-button[type=submit].col-xs-6:hover, input[type=date]:hover{
-   background: rgba(255, 127, 80, 0.5);
-   color: white;
-   border: 1px solid coral;
-}
-input[type=date]{
-   height: 40px;
-   text-align: center;
-   background: coral;
-   color: white;
-   border: 1px solid coral;
-   text-transform: uppercase;
-}
-h2{
-   color: coral;
-}
-.input-50px{
-   height: 35px;
-}
-#work-form .col-xs-12, #blog-form .col-xs-12{
-   padding: 0px;
-}
-.img-side{
-   background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/96462a84650693.5d64050fbe779.jpg); 
-   width: 100%;
-   height: 100%; 
-   background-size: cover;
-   background-position: center center;
-}
-#switch-form{
-   height: auto;
-   min-height: 40px;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translateX(-50%) translateY(-50%);
-   padding: 5px 10px;
-}
+
 .containerX{
-   max-width: 80vw;
+   /* max-width: 80vw;
    margin: 10px auto;
-   margin-top: 60px;
+   margin-top: 60px; */
    display: none;
-}
-.back-to-web{
-   height: auto;
-   min-height: 40px;
-   position: relative;
-   /* top: 70%; */
-   /* left: 50%; */
-   /* transform: translateX(-50%) translateY(-50%);
-   padding: 5px 10px; */
-}
-.img-out-side{
-    height:760px;
- }
-.form_height{
-   background-color:rgba(255, 127, 80, 0.0);
-   padding: 20px;
-}
-@media screen and (max-width: 768px) {
-.containerX{
-   max-width: 100vw;
-   margin: 0px auto;
-   margin-top: 15px;
-}
-.form_height{
-   padding: 5px;
-}
 }
 
 /* Full-width input fields */
-input[type=text], input[type=password] {
+.form-login input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid coral;
+  border: 1px solid white;
   box-sizing: border-box;
+  border-radius: 5px;
 }
-
-/* Set a style for all buttons */
-.buttonX {
-  background-color: coral;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-.buttonX:hover {
-  opacity: 0.8;
-}
-
-/* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-}
-
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-
-.form-container {
-  padding: 16px;
-}
-
 
 
 /* The Modal (background) */
@@ -156,45 +35,56 @@ img.avatar {
 
 /* Modal Content/Box */
 .form-login {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid coral;
+   position: relative;
+   padding: 30px;
+  background-color: white;
+ 
   width: 80%; /* Could be more or less, depending on screen size */
   max-width:600px;
   min-width:320px;
+  left: 50%;
+   transform: translateX(-50%) translateY(-50%);
+   top: 50%;
+   border: 1px solid white;
+   background-color: black;
+   border-radius: 10px;
 }
 
 #loginX{
    position: absolute;
-   left: 50%;
-   transform: translateX(-50%) translateY(-50%);
-   top: 50%;
+    padding: 30px;
+    background: black;
+    width: 100%;
+    height: 100%;
    
 }
 
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
+
+
+table {
+  border-collapse: collapse;
 }
 
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
 }
 
+tr:nth-child(even) {
+  background-color: rgba(83,83,83,0.2);
+}
+		input.btn{
+			width: 100px
+		}
+      .form-login label{color: white;}
 </style>
 <body>
 <div id="loginX">
-   <form class="form-login animate">
-      <div class="imgcontainer">
-        <img src="https://www.heisca.com/images/about.jpg" alt="Avatar" class="avatar">
-      </div>
+   <form class="form-login ">
+      <!-- <div class="imgcontainer">
+        <img src="https://scontent.fpnh22-3.fna.fbcdn.net/v/t39.30808-6/272987180_2096026780557028_5272032583216395520_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=VN59bpREW7cAX8LBpMc&_nc_ht=scontent.fpnh22-3.fna&oh=00_AT-rqJtxcfXPg2nysBxjRqaYAb92-Rj9krGvyIgmz3xx3A&oe=62942019" alt="Avatar" class="avatar">
+      </div> -->
   
       <div class="form-container">
         <label for="uname"><b>Username</b></label>
@@ -203,156 +93,179 @@ img.avatar {
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required id="psw" required>
           
-        <button type="submit"  class="buttonX">Login</button>
+        <button type="submit"  class="buttonX btn btn-primary" style="margin-top:10px; padding: 10px 20px;">Login</button>
       </div>
     </form>
 </div>
 
-<div class="row containerX">
-   <div class="col-xs-12 col-sm-6 img-out-side">
-      <div class="img-side"><button id="switch-form">CLICK TO SHOW BLOG INPUT CONTENT</button>
-      </div>
-   </div>
-   <div class="col-sm-6 col-xs-12 form_1 form_height">
-         <form id="work-form" method="GET" action="" class="row" style="margin: 10px;">
-            <h2>Input contents for Work Site</h2>
-            <a href="https://nvc-page.github.io/" class="back-to-web"><em>Back to website</em></a> <br> <br>
-            <textarea type="text" name="project_name" placeholder="Project Name" class="col-xs-12 input-50px" cols="30" rows="1"></textarea>
-            <textarea type="url" name="work_img" placeholder="Project Image 1" class="col-xs-12 input-50px" cols="30" rows="1"></textarea>
-            <textarea type="text" name="content" placeholder="Project Content 1" cols="30" rows="3" class="col-xs-12"></textarea>
-            <textarea type="url" name="img_url2" placeholder="Project Image 2" class="col-xs-12 input-50px" cols="30" rows="1"></textarea>
-            <textarea type="text" name="text_2" placeholder="Project Content 2" cols="30" rows="3" class="col-xs-12"></textarea>
-            <textarea type="url" name ="img_url3" placeholder="Project Image 3" class="col-xs-12 input-50px" cols="30" rows="1"></textarea>
-            <textarea type = "text" name ="text_3" placeholder="Project Content 3" cols="30" rows="3" class="col-xs-12"></textarea>
-            <input type = "date" name ="time_stamp" placeholder="Time stamp" class="col-xs-6" required>
-            <button type="submit" id="submit-form" class="col-xs-6">SEND TO DATABASE</button>
-         </form>
-   </div>
+<div class="container containerX">
+<form id="formCreate" class="form-group">
+  <h2><strong>Create Record</strong></h2>
+	<hr>
+	<br>
+	
+  <p>
+    <label for="name">Name:</label>
+    <input id="name" name="name" type="text"  class="form-control" value="" />
+  </p>
+  <p>
+    <label for="comment">Content:</label>
+    <br/>
+    <textarea id="comment" name="comment" class="form-control" cols="40"></textarea>
+  </p>
+  <p>
+    <label for="note">Category:</label>
+    <br/>
+    <textarea id="note" name="note" class="form-control" cols="40"></textarea>
+  </p>
+<p style="display:none">
+    <label for="category">Category:</label>
+    <br/>
+    <textarea id="category" name="category" class="form-control" cols="40"></textarea>
+  </p>
+	  <p>
+    <label for="imgurl">imgurl:</label>
+    <br/>
+    <textarea id="imgurl" name="imgurl" cols="40" class="form-control"></textarea>
+  </p>
+  <input type="hidden" name="action" class="form-control" value="create">
+  <p id="result"></p>
+  <input type="submit" value="Create" class="btn btn-primary" id="submitBtn"/>
+</form>
+	
 
-<div class="col-sm-6 col-xs-12 form_2 form_height">
-         <form id="blog-form" method="GET" action="" class="row" style="margin: 10px;">       
-            <h2>Input contents for Blog Site</h2> 
-            <a href="https://nvc-page.github.io/" class="back-to-web"><em>Back to website</em></a> <br> <br>
-            <textarea type="text" name="blog_name" placeholder="Blog Name" class="col-xs-12 input-50px" cols="30" rows="1"></textarea>
-            <textarea type="url" name="img_url1" placeholder="Blog Image 1" class="col-xs-12 input-50px" cols="30" rows="1"></textarea>
-            <textarea type="text" name="text_1" placeholder="Blog Content 1" class="col-xs-12" cols="30" rows="3"></textarea>
-            <textarea type="url" name="img_url2" placeholder="Blog Image 2" class="col-xs-12 input-50px" cols="30" rows="1"></textarea>
-            <textarea type="text" name="text_2" placeholder="Blog Content 2" class="col-xs-12" cols="30" rows="3"></textarea>
-            <textarea type="url" name ="img_url3" placeholder="Blog Image 3" class="col-xs-12 input-50px" cols="30" rows="1"></textarea>
-            <textarea type = "text" name ="text_3" placeholder="Blog Content 3" class="col-xs-12"cols="30" rows="3"></textarea>
-            <input type = "date" name ="time_stamp" placeholder="Time stamp" class="col-xs-6" required>
-            <button type="submit" id="submit-blog-form" class="col-xs-6">SEND TO DATABASE</button>
-         </form>
-   </div>
+	
+<hr/>
+<form id="formRetrieve" class="form-group" >
+  <h3><strong>View Records</strong></h3>
+  <input type="hidden" name="action" class="btn btn-primary" value="retrieve">
+  <input id="btnRetrieve" type="submit" value="Retrieve" class="btn btn-primary" />
+</form>
+<br/>
+<!-- style="height: 700px; overflow: scroll;" class="framenvc"  -->
+<!-- Load data -->
+<div id="framenvc">
+  <tbody class="table-responsive" >
 
+  <table id="datatable" class="table table-striped" >
+  </table>
 
-   <div class="col-sm-12 col-xs-12">
-      <br><br>
-      <textarea name="editor"></textarea>
-   </div>
+  </tbody>
 </div>
 
-<script>
-      CKEDITOR.replace( 'editor' );
-</script>
+
+
+<div id="messageRetrieve"></div>
+
+	
+	
+	
+<form id="formUpdate" class="form-group" style="display:none">
+  <h3><strong>Update Record</strong></h3>
+  <p>
+    <label for="tid">TID:</label>
+    <input id="tid" name="tid" type="text" value="" disabled="true" class="form-control"/>
+  </p>
+  <p>
+    <label for="name">Name:</label>
+    <input id="name" name="name" type="text" class="form-control" value="" />
+  </p>
+  <p>
+    <label for="comment">Content:</label>
+    <br/>
+    <textarea id="edcomment" name="comment" class="editComment" cols="40"></textarea>
+  </p>
+<p>
+    <label for="note">Category:</label>
+    <br/>
+    <textarea id="note" name="note" class="form-control" cols="40"></textarea>
+  </p>
+<p style="display:none">
+    <label for="category">Category:</label>
+    <br/>
+    <textarea id="edcategory" name="category" class="editCategory form-control" cols="40"></textarea>
+  </p> 
+	  </p>
+	  <p>
+    <label for="imgurl">imgurl:</label>
+    <br/>
+    <textarea id="imgurl" name="imgurl" cols="40" class="form-control"></textarea>
+  </p>
+  <input type="hidden" name="action" value="update">
+  <input type="submit" value="Update" id="updateBtn" class="btn btn-primary"/>
+  <p id="messageUpdate"></p>
+</form>
+	
+	
+<hr/>
+<form id="formDelete" class="form-group" >
+  <h3><strong>Delete Record</strong></h3>
+  <p>
+    <label for="dtid">TID:</label>
+    <input id="dtid" name="tid" type="text" value="" disabled="true" class="form-control"/>
+  </p>
+  <p>
+    <label for="dname">Name:</label>
+    <input id="dname" name="name" type="text" value="" disabled="true" class="form-control"/>
+  </p>
+  <input type="hidden" name="action" value="delete" class="form-group">
+  <input type="submit" value="Delete" class="btn btn-primary" />
+  <p id="messageDelete"></p>
+</form>
+	
+</div>		
+
+
+
+
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/gas7d6sa7d6safvc5x.js"></script>
+<script src="../web-projects/JS-GET/draft.js"></script>
 
 <script>
-    
-   var F=1
-   $(document).ready(function(){ 
-      $(".form_2").css({display: "none"});
-      $("#switch-form").click(function(){
-         if (F==1) {
-            $(this).html("CLICK TO SHOW BLOG INPUT CONTENT");
-            $(".form_1").css({display: ""});
-            $(".form_2").css({display: "none"});
-            F=0;
-         } else if(F==0) {
-            $(this).html("CLICK TO SHOW WORK INPUT CONTENT");
-            $(".form_1").css({display: "none"});
-            $(".form_2").css({display: ""});
-            F=1;
-         }
-      });
-
-      $(window).on("load resize", function () {
-         var screenX = $(window).width();
-         //console.log(screenX)
-         if (screenX >= 768) {
-            var formHeight = $(".form_height").height()+60;
-          $(".img-out-side").css({height:formHeight+"px"}) 
-         } else{
-         $(".img-out-side").css({height:"200px"}) 
-         }
-                
-      }); 
-
+   CKEDITOR.replace('category');
+   CKEDITOR.replaceClass = 'editCategory';
+   //CKEDITOR.replace('.editCategory');
+   //$( '.editCategory' ).ckeditor();
+   $(document).ready(function(){
+ 
+   $("#submitBtn").click(function(){
+       var editorData= CKEDITOR.instances['category'].getData();
+       //alert(" your data is :"+editorData);
+       $('#category').val(editorData);
    })
-</script>
-<script type="text/javascript">
- $(document).ready(function(){ 
-   var submit = $("#submit-form");
-      submit.click(function(e){
-         //e.preventDefault();
-         $(this).attr("disabled", "true");
-         //$(this).closest("form").submit();
-
-            var data = $('form#work-form').serialize();
-            $.ajax({
-               type : 'GET', 
-               url : 'https://script.google.com/macros/s/AKfycbx1_6eguTteuY9y-QUJPpCnndJqsZdlh6GMzPNiFTN_zbrW2lyK/exec',
-               dataType:'json',
-               crossDomain : true,
-               data : data,
-               success : function(data)
-            { 
-            if(data == 'false'){
-                  alert('Thêm không thành công, bạn cũng có thể sử dụng để hiển thị Popup hoặc điều hướng');
-               }else{
-                  alert('Đã thêm dữ liệu vào work page thành công');
-                  document.getElementById("work-form").reset(); 
-                  $("#submit-form")[0].disabled = false;
-               }
-            }
-            });
-      return false;
-      });
- });
-</script>
-
-<script type="text/javascript">
-   $(document).ready(function(){ 
-     var submit = $("#submit-blog-form");
-        submit.click(function(e){
-           //e.preventDefault();
-           $(this).attr("disabled", "true");
-           //$(this).closest("form").submit();
-  
-              var data = $('form#blog-form').serialize();
-              $.ajax({
-                 type : 'GET', 
-                 url : 'https://script.google.com/macros/s/AKfycbxXCaUH_klFkFtVwrUjwiWA_RML-0ml9iqiXGoEHSTlWi4THEo/exec',
-                 dataType:'json',
-                 crossDomain : true,
-                 data : data,
-                 success : function(data)
-              { 
-              if(data == 'false'){
-                    alert('Thêm không thành công, bạn cũng có thể sử dụng để hiển thị Popup hoặc điều hướng');
-                 }else{
-                    alert('Đã thêm dữ liệu vào blog thành công');
-                    document.getElementById("blog-form").reset(); 
-                    $("#submit-blog-form")[0].disabled = false;
-                 }
-              }
-              });
-        return false;
-        });
+   $("#updateBtn").click(function(){
+     
+       var editDataUpdate= CKEDITOR.instances['edcategory'].getData();
+       //alert(" your data is :"+editDataUpdate);
+       $('#edcategory').val(editDataUpdate);
    });
-  </script>
+   CKEDITOR.config.allowedContent = true;
+   });
+ </script>
+ 
+ <script>
+   CKEDITOR.replace('comment');
+  CKEDITOR.replace('edcomment');
+ // CKEDITOR.replaceClass = 'editComment';
+   //CKEDITOR.replace('.editComment');
+   //$( '.abcd' ).ckeditor();
+   $(document).ready(function(){
+ 
+   $("#submitBtn").click(function(){
+       var editorData2= CKEDITOR.instances['comment'].getData();
+       //alert(" your data is :"+editorData);
+       $('#comment').val(editorData2);
+   })
+   $("#updateBtn").click(function(){
+     
+       var editDataUpdate2= CKEDITOR.instances['edcomment'].getData();
+       //alert(" your data is :"+editDataUpdate);
+       $('#edcomment').val(editDataUpdate2);
+   })
+   });
+ </script>
 
 </html>
