@@ -54,7 +54,7 @@ jQuery(document).ready(function ($) {
 					tdHTML = "<td>Delete</td><td>Edit</td>" + tdHTML;
 					tdHTML = tdHTML.replace(/td>/gi, "th>")
 				} else {
-					tdHTML += "<td ><button class='btn btn-primary' onclick='recordDelete(this)'>Delete</button></td>";
+					//tdHTML += "<td ><button class='btn btn-primary' onclick='recordDelete(this)'>Delete</button></td>";
 					tdHTML += "<td ><button class='btn btn-primary' onclick='recordEdit(this)'>Edit</button></td>"
 				}
 				for (j = 0; j < item.length; j++) {
