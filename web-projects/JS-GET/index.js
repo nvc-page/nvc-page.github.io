@@ -110,7 +110,7 @@
         tdHTML=tdHTML.replace(/td>/gi,"th>");
       }else{
         tdHTML+= "<td><button onclick='recordDelete(this)'>delete</button></td>";
-        tdHTML+= "<td><button onclick='recordEdit(this)'>edit</button></td>";
+//         tdHTML+= "<td><button onclick='recordEdit(this)'>edit</button></td>";
       }
       //prepare remaining columns
       for (j = 0; j < item.length; j++) { 
