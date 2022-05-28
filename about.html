@@ -27,37 +27,8 @@
       <div class="wrapper">
 
             <!--------------- navbar starts here --------------->
-            <nav>
-                  <span id="brand">
-                        <a href="index.html">H Ξ I S Ɔ Λ</a>
-                  </span>
-
-                  <ul id="menu">
-                        <li><a href="index.html">home<span>.</span></a></li>
-                        <li><a href="work.html">work<span>.</span></a></li>
-                        <li><a href="about.html">about me<span>.</span></a></li>
-                        <li><a href="contact.html">contact<span>.</span></a></li>
-                  </ul>
-
-                  <div id="toggle">
-                        <div class="span">menu</div>
-                  </div>
-
-            </nav>
-
-            <div id="resize">
-                  <div class="close-btn">close</div>
-
-                  <ul id="menu">
-                        <li><a href="index.html">home<span>.</span></a></li>
-                        <li><a href="work.html">work<span>.</span></a></li>
-                        <li><a href="about.html">about me<span>.</span></a></li>
-                        <li><a href="contact.html">contact<span>.</span></a></li>
-                  </ul>
-            </div>
-
+            <div class="nav-bar"></div>
             <!--------------- navbar ends here --------------->
-
 
             <!--------------- hero image starts here --------------->
             <div class="container">
@@ -66,7 +37,6 @@
                   </div>
             </div>
             <!--------------- hero image ends here --------------->
-
 
             <!--------------- hero section starts here --------------->
             <div class="container">
@@ -95,56 +65,7 @@
             <div class="whitespace"></div>
 
             <!--------------- footer starts here --------------->
-            <div class="footer">
-                  <div class="container">
-                        <br><br>
-
-                        <div class="collab">
-                              <div class="row">
-                                    <div class="col-lg-12">
-                                          <p class="wow fadeInUp">Got an interesting project? I can help you.</p>
-                                    </div>
-                              </div>
-                        </div>
-
-                        <br>
-
-                        <div class="hr">
-                              <div class="row"></div>
-                        </div>
-
-                        <br><br>
-
-                        <div class="info">
-                              <div class="row">
-                                    <div class="col-lg-4" id="personal">
-                                          <p class="wow fadeInUp">connect with me</p>
-                                          <h4 class="wow fadeInUp" data-wow-delay="0.2s">ig @1995nvc</h4>
-                                          <br><br>
-                                    </div>
-
-                                    <div class="col-lg-4" id="media">
-                                          <p class="wow fadeInUp" data-wow-delay="0s">follow me</p>
-
-                                          <ul>
-                                                <li id="fb" class="wow fadeInUp" data-wow-delay="0.4s">fb</li>
-                                                <li id="ig" class="wow fadeInUp" data-wow-delay="0.6s">ig</li>
-                                                <li id="tw" class="wow fadeInUp" data-wow-delay="0.8s">tw</li>
-                                                <li id="yt" class="wow fadeInUp" data-wow-delay="1s">yt</li>
-                                          </ul>
-
-                                          <br><br>
-                                    </div>
-
-                                    <div class="col-lg-4" id="address">
-                                          <p class="wow fadeInUp" data-wow-delay="0s">say hello</p>
-                                          <h4 class="wow fadeInUp" data-wow-delay="0.2s">heisca@outlook.com</h4>
-                                          <br><br>
-                                    </div>
-                              </div>
-                        </div>
-                  </div>
-            </div>
+            <div class="footer"></div>
 
             <!--------------- footer ends here --------------->
 
@@ -156,46 +77,6 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 
       <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-      <script type="text/javascript">
-
-      // navigation starts here
-      $("#toggle").click(function() {
-            $(this).toggleClass('on');
-            $("#resize").toggleClass("active");
-      });
-
-      $("#resize ul li a").click(function() {
-            $(this).toggleClass('on');
-            $("#resize").toggleClass("active");
-      });
-
-      $(".close-btn").click(function() {
-            $(this).toggleClass('on');
-            $("#resize").toggleClass("active");
-      });
-
-      // navigation ends here
-
-      // nav animation
-
-      TweenMax.from("#brand", 1, {
-            delay: 0.4,
-            y: 10,
-            opacity: 0,
-            ease: Expo.easeInOut
-      })
-
-      TweenMax.staggerFrom("#menu li a", 1, {
-            delay: 0.4,
-            opacity: 0,
-            ease: Expo.easeInOut
-      }, 0.1);
-
-      // nav animation ends
-
-      new WOW().init();
-
-
-      </script>
+      <script src="index.js"></script>
 </body>
 </html>
