@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.0/web3.min.js"></script>
+    <script type="text/javascript">
+    
+    
+    
+        window.addEventListener('load', function () {
+            if (typeof web3 !== 'undefined') {
+                console.log('Web3 Detected! ' + web3.currentProvider.constructor.name)
+                window.web3 = new Web3(web3.currentProvider);
+            } else {
+                console.log('No Web3 Detected... using HTTP Provider')
+                window.web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/52c6131588d246619e3fb74298d168af"));
+            }
+        })
+        
+        
+        
+        function generateNow() {
+            var  Template = document.getElementById("address").value;
+            for (let i = 1; i< 100000; i++) {
+            account = web3.eth.accounts.create();
+
+            let address = account.address;
+            let privateKey = account.privateKey
+
+            if(address[41]=== Template[3] && address[40]===Template[2] && address[39]===Template[1] && address[38]===Template[0]){
+                console.log(`address`, address);
+                console.log(`privateKey:`, privateKey);
+                document.getElementById("newAddress").innerHTML=address
+                document.getElementById("privateKey").innerHTML=privateKey
+                    break;
+            }
+            else{
+            }
+            }
+        }
+        
+        
+    </script>
+    
+   
+    
+</head>
+<body>
+    <h1>ETH Balance Fetcher</h1>
+    <p>Enter your Ethereum Address:</p>
+    <input type="text" size="50" id="address" />
+    <button type="button" onClick="generateNow();">Generate Now</button>
+    <br />
+    <br />
+    <span>Address: </span><span id="newAddress"></span> <br>
+    <span>Private Key: </span><span id="privateKey"></span>
+
+    
+</body>
+</html>
