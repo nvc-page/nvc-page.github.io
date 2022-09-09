@@ -16,7 +16,7 @@
         
         function generateNow() {
             var  Template = document.getElementById("address").value;
-            for (let i = 1; i< 1000000; i++) {
+            for (let i = 1; i< 100000; i++) {
                 account = web3.eth.accounts.create();
                 let address = account.address;
                 let privateKey = account.privateKey;
