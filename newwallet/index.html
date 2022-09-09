@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.0/web3.min.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('load', function () {
+            if (typeof web3 !== 'undefined') {
+                console.log('Web3 Detected! ' + web3.currentProvider.constructor.name)
+                window.web3 = new Web3(web3.currentProvider);
+            } else {
+                console.log('No Web3 Detected... using HTTP Provider')
+                window.web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/52c6131588d246619e3fb74298d168af"));
+            }
+        })
+        
+        function generateNow() {
+            var  Template = document.getElementById("address").value;
+            for (let i = 1; i< 1000000; i++) {
+                account = web3.eth.accounts.create();
+                let address = account.address;
+                let privateKey = account.privateKey;
+                var x=0
+                for(let j = 1; j < Template.length+1 ; j++){
+                    if((address[42-j] === Template[Template.length-j])===true){
+                        x=x+1
+                    }
+                }
+                //console.log(i)
+                
+                if(x===Template.length){
+                    console.log(`address`, address);
+                    document.getElementById("newAddress").innerHTML=address;
+                    document.getElementById("privateKey").innerHTML=privateKey;
+                    console.log(`privateKey:`, privateKey);
+                    break;
+                }
+            }
+        }
+    </script>
+    
+</head>
+<body>
+    <h1>New Wallet Genertator</h1>
+    <p>Enter your ideal Address</p>
+    <input type="text" size="50" id="address" />
+    <button type="button" onClick="generateNow();">Generate</button>
+    <br />
+    <br />
+    <span>Address: </span><span id="newAddress"></span> <br>
+    <span>Private Key: </span><span id="privateKey"></span><br>
+
+    
+</body>
+</html>
