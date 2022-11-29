@@ -516,8 +516,10 @@ h6 {
 }
 
 .image {
-      background: url(https://scontent.fsgn2-6.fna.fbcdn.net/v/t1.6435-9/35686992_992247034268347_7634150960998121472_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=e3f864&_nc_ohc=D_x0tnNhoaYAX-VyuP3&_nc_ht=scontent.fsgn2-6.fna&oh=00_AT-kOjTU9Xy7Qp8MTCcIx7c0NfCQwWgZQu4LG6EASHE7eA&oe=62B45E02) no-repeat 50% 70%;
+      background: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/83287c87599771.5dbd012d86077.png) no-repeat 50% 70%;
       background-position: center center;
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
 }
 
 /*--------------- contact form --------------- */
