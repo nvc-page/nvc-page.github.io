@@ -6,10 +6,13 @@
         body {
             font-family: Arial, sans-serif;
             padding: 20px;
-              display: flex;
+              
+
+        }
+        .container{
+        		display: flex;
               flex-direction: column;
               align-items: center;
-
         }
         h1 {
             font-size: 32px;
@@ -24,7 +27,7 @@
         button[type="button"] {
             padding: 10px 20px;
             font-size: 16px;
-            background-color: #0277BD;
+            background-color: #04AA6D;
             color: #fff;
             border: none;
             border-radius: 4px;
@@ -32,6 +35,22 @@
         }
         span {
             font-size: 16px;
+        }
+        .addressCopyAlert{
+        	color:#04AA6D;
+            font-size:14px;
+            display:none;
+        }
+        .active{
+        	display:block!important
+        }
+        .privateKeyCopyAlert{
+        	color:#04AA6D;
+            font-size:14px;
+            display:none;
+        }
+        .active{
+        	display:block!important
         }
     </style>
     <meta charset="UTF-8">
@@ -70,19 +89,68 @@
                 }
             }
         }
+        
+        
+
     </script>
     
 </head>
 <body>
-    <h1>New Wallet Genertator</h1>
-    <p>Enter your ideal Address</p>
-    <input type="text" size="50" id="address" />
-    <button type="button" onClick="generateNow();">Generate</button>
-    <br />
-    <br />
-    <span>Address: </span><span id="newAddress"></span> <br>
-    <span>Private Key: </span><span id="privateKey"></span><br>
+	<div class="container">
+        <h1>New Wallet Genertator</h1>
+        <p>Enter your ideal address</p>
+        <input type="text" size="50" id="address" />
+        <i style="transform:translateY(-14px)">Enter a short suffix of your choice, and click ‘generate’ to start.</i>
+        <button type="button" onClick="generateNow();">Generate</button>
+        <br />
+        <br />
+        <span>Address: </span><span id="newAddress" style="font-weight:bold; margin-top:7px"></span> <br>
+        <span class="addressCopyAlert" style="transform:translateY(-14px)">Address Copied</span>
+        <span>Private Key: </span><span id="privateKey"  style="font-weight:bold; margin-top:7px"></span><br>
+        <span class="privateKeyCopyAlert" style="transform:translateY(-14px)">Private Key Copied</span>
+    </div>
+    <div style="
+    	position:absolute;
+        bottom:0px;
+        padding:20px;
+    ">
+    	<p style="text-align:center"><i>Any address generated directly by using Infura API, this is ERC-20 compatible, which means you can use it for an ICO, an airdrop, or just to withdraw your funds from an exchange.
+The keystore file is 100% compatible with MyEtherWallet, MetaMask, TrustWallet,...</i></p>
+    </div>
+    
+	<script>
+        function copyToClipboard(text) {
+          const input = document.createElement('input');
+          document.body.appendChild(input);
+          input.value = text;
+          input.select();
+          document.execCommand('copy');
+          document.body.removeChild(input);
+        }
+
+        const newAddress = document.getElementById("newAddress");
+        newAddress.addEventListener("click", function() {
+            copyToClipboard(newAddress.textContent);
+            //alert("Address Copied: " + newAddress.textContent);
+            document.querySelector('.addressCopyAlert').classList.add('active');
+            setTimeout(function() {
+              document.querySelector('.addressCopyAlert').classList.remove('active');
+            }, 2000);
+          
+        });
+
+        const privateKey = document.getElementById("privateKey");
+        privateKey.addEventListener("click", function() {
+            copyToClipboard(privateKey.textContent);
+            //alert("Private Key Copied: " + privateKey.textContent);
+            document.querySelector('.privateKeyCopyAlert').classList.add('active');
+            setTimeout(function() {
+              document.querySelector('.privateKeyCopyAlert').classList.remove('active');
+            }, 2000);
+        });
+	</script>
 
     
 </body>
+
 </html>
