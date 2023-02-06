@@ -103,22 +103,22 @@
 </head>
 <body>
 	<div class="container">
-        <h1>New Wallet Genertator</h1>
-        <p>Enter your ideal address</p>
+        <h1 style="text-align:center">New Wallet Genertator</h1>
+        <p style="text-align:center">Enter your ideal address</p>
         <input type="text" size="50" id="address" />
-        <i style="transform:translateY(-14px)">Enter a short suffix of your choice, and click ‘generate’ to start.</i>
+        <i style="transform:translateY(-14px); text-align:center">Enter a short suffix of your choice, and click ‘generate’ to start.</i>
         <button type="button" onClick="generateNow();">Generate</button>
         <br />
         <br />
-        <span>Address: </span><span id="newAddress" style="font-weight:bold; margin-top:7px">E.g. 0x143019B2eF8Ce13ADd90938aBB359e4e5be5dc84</span> <br>
+        <span>Address: </span><span id="newAddress" style="font-weight:bold; margin-top:7px; text-align:center">E.g. 0x143019B2eF8Ce13ADd90938aBB359e4e5be5dc84</span> <br>
         <span class="addressCopyAlert" style="transform:translateY(-14px)">Address Copied</span>
-        <span>Private Key: </span><span id="privateKey"  style="font-weight:bold; margin-top:7px">E.g. 0xe0d6e9a6c3c7854e22671f23624a3c218bd9d3f6271b8d83c854a9bf1968a067</span><br>
+        <span>Private Key: </span><span id="privateKey"  style="font-weight:bold; margin-top:7px; text-align:center">E.g. 0xe0d6e9a6c3c7854e22671f23624a3c218bd9d3f6271b8d83c854a9bf1968a067</span><br>
         <span class="privateKeyCopyAlert" style="transform:translateY(-14px)">Private Key Copied</span>
     </div>
     <div style="
-    	position:absolute;
-        bottom:0px;
+    	position:relative;
         padding:20px;
+        margin-top:10%;
     ">	<p style="text-align:center; color:#04AA6D">This site cannot and will never store your private key</p>
     	<p style="text-align:center"><i>Any address generated directly by using Infura API, this is ERC-20 compatible, which means you can use it for an ICO, an airdrop, or just to withdraw your funds from an exchange.
 The keystore file is 100% compatible with MyEtherWallet, MetaMask, TrustWallet,...</i></p>
